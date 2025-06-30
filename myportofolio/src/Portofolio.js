@@ -2,12 +2,14 @@ import React, { useState, useEffect } from 'react';
 import './Porto.css';
 
 function Portfolio() {
+    // eslint-disable-next-line no-unused-vars
     const [projects, setProjects] = useState([]);
-    const [loading, setLoading] = useState(true);
-    const [error, setError] = useState(null);
-
-    
+    // eslint-disable-next-line no-unused-vars
+    const [loading, setLoading] = useState(true); // Add this line
+    // eslint-disable-next-line no-unused-vars
+    const [error, setError] = useState(null);   // Add this line
     const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000';
+
 
     useEffect(() => {
         const fetchProjects = async () => {
