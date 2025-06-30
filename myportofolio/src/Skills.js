@@ -6,14 +6,12 @@ function Skills() {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
 
-    // Define API_URL based on environment variable (for Docker/production)
-    // Fallback to localhost for direct local npm start development
     const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000';
 
     useEffect(() => {
         const fetchSkillProjects = async () => {
             try {
-                const response = await fetch(`${API_URL}/api/skills`); // Fetch from new API endpoint
+                const response = await fetch(`${API_URL}/api/skills`); 
 
                 if (!response.ok) {
                     throw new Error(`HTTP error! status: ${response.status}`);
@@ -29,7 +27,7 @@ function Skills() {
         };
 
         fetchSkillProjects();
-    }, []);
+    }, [API_URL]);
 
     if (loading) {
         return <div className="loading-message">Loading skills...</div>;
@@ -58,14 +56,14 @@ function Skills() {
                                         <h4>{skillGroup.projectTitle}</h4>
                                         <p>{skillGroup.description}</p>
                                     </div>
-                                    {/* Added Certification Link */}
+                                    {}
                                     {skillGroup.certificationLink && (
-                                        <div className="skill-links"> {/* New container for skill links */}
+                                        <div className="skill-links"> {}
                                             <a
                                                 href={skillGroup.certificationLink}
                                                 target="_blank"
                                                 rel="noopener noreferrer"
-                                                className="skill-link certification-link" // Use certification-link class
+                                                className="skill-link certification-link" 
                                             >
                                                 View Certification
                                             </a>
@@ -84,7 +82,7 @@ function Skills() {
                                                 href={achievement.link}
                                                 target="_blank"
                                                 rel="noopener noreferrer"
-                                                className="skill-tag skill-tag-link" // Add a class for clickable tags
+                                                className="skill-tag skill-tag-link" 
                                             >
                                                 {achievement.name}
                                             </a>

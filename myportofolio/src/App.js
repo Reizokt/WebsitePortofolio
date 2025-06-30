@@ -8,7 +8,6 @@ import Skills from './Skills';
 import Home from './Home';
 
 function App() {
-  const [count, setCount] = useState(0);
 
   return (
     <div className="app">
