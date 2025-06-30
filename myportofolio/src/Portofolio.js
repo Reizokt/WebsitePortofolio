@@ -8,7 +8,7 @@ function Portfolio() {
     const [loading, setLoading] = useState(true); // Add this line
     // eslint-disable-next-line no-unused-vars
     const [error, setError] = useState(null);   // Add this line
-    const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000';
+    const API_URL = process.env.REACT_APP_API_URL || 'https://website-portofolio-jogi.vercel.app/';
 
 
     useEffect(() => {
