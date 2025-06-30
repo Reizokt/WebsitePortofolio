@@ -3,7 +3,7 @@
   "rewrites": [
     {
       "source": "/api/(.*)",
-      "destination": "/server/api"
+      "destination": "/server/api" 
     },
     {
       "source": "/(.*)",
@@ -27,11 +27,10 @@
       "headers": [
         { "key": "Access-Control-Allow-Origin", "value": "*" },
         { "key": "Access-Control-Allow-Methods", "value": "GET,POST,PUT,DELETE,OPTIONS" },
-        { "key": "Access-Control-Allow-Headers", "value": "X-Requested-With, Content-Type, Accept, Authorization" } 
+        { "key": "Access-Control-Allow-Headers", "value": "X-Requested-With, Content-Type, Accept, Authorization" }
       ]
     }
   ],
   "installCommand": "npm install --prefix myportofolio && npm install --prefix server",
-  "buildCommand": "npm run build --prefix myportofolio",
-  "devCommand": "npm run dev --prefix server" 
+  "buildCommand": "npm run build --prefix myportofolio"
 }
