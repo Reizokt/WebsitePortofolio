@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@100;200;300;400;500;600;700;800&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Manrope:wght@200;300;400;500;600;700;800&family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 /* Porto.css - Clean Rounded Container for Projects - Matching Skills.css Cosmic Colors */
 
 /* Main container for the Portfolio section */
@@ -36,6 +38,7 @@
 
 /* Title styling matching cosmic theme - clean without background box */
 .Portfolio h1 {
+    font-family: 'Outfit', monospace; /* Changed font */
     font-size: 4rem;
     font-weight: 300;
     background: linear-gradient(135deg,
@@ -49,7 +52,6 @@
     margin-bottom: 1rem;
     text-align: center;
     line-height: 1.1;
-    font-family: 'Georgia', serif;
     text-shadow:
         0 0 20px rgba(140, 120, 200, 0.3),
         0 0 40px rgba(140, 120, 200, 0.1);
@@ -60,12 +62,12 @@
 
 /* Subtitle paragraph styling with cosmic colors from Skills.css */
 .Portfolio p {
+    font-family: 'Space Grotesk', sans-serif; /* Changed font */
     color: #e8e3f0;
     font-size: 1.3rem;
     line-height: 1.6;
     text-align: center;
     margin: 0 0 3rem 0;
-    font-family: 'Arial', sans-serif;
     letter-spacing: 0.5px;
 }
 
@@ -166,13 +168,13 @@
 }
 
 .project-link {
+    font-family: 'Poppins', sans-serif; /* Changed font */
     padding: 0.8rem 1.5rem;
     border-radius: 8px;
     text-decoration: none;
     font-weight: 600;
     font-size: 0.9rem;
     transition: all 0.3s ease;
-    font-family: 'Arial', sans-serif;
 }
 
 .live-link {
@@ -208,21 +210,21 @@
 
 /* Project titles */
 .project-content h3 {
+    font-family: 'Space Grotesk', sans-serif; /* Changed font */
     color: #e8e3f0;
     font-size: 1.5rem;
     font-weight: 600;
     margin-bottom: 1rem;
-    font-family: 'Georgia', serif;
     text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
 }
 
 /* Project descriptions */
 .project-content p {
+    font-family: 'Poppins', sans-serif; /* Changed font */
     color: #e8e3f0;
     font-size: 1rem;
     line-height: 1.6;
     margin-bottom: 1.5rem;
-    font-family: 'Arial', sans-serif;
 }
 
 /* Technology tags container */
@@ -234,6 +236,7 @@
 
 /* Individual technology tags */
 .tech-tag {
+    font-family: 'Poppins', sans-serif; /* Changed font */
     background: linear-gradient(135deg,
         rgba(140, 120, 200, 0.1) 0%,
         rgba(120, 100, 180, 0.05) 100%);
@@ -242,7 +245,6 @@
     border-radius: 15px;
     font-size: 0.8rem;
     border: 1px solid rgba(140, 120, 200, 0.2);
-    font-family: 'Arial', sans-serif;
     font-weight: 500;
     transition: all 0.3s ease;
     cursor: default;
@@ -335,7 +337,7 @@
     }
 
     .Portfolio h1 {
-        font-size: 2.2rem;
+        font-size: 2.4rem;
     }
 
     .Portfolio p {
