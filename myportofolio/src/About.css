@@ -1,0 +1,231 @@
+/* About.css - Cosmic Nebula colors with original About design */
+
+/* Main container for the About section */
+.Aboutme {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 5rem 2rem 2rem 2rem;
+  position: relative;
+}
+
+/* Content wrapper with cosmic styling matching Home colors and size */
+.about-content {
+  max-width: 1300px;
+  width: 100%;
+  position: relative;
+  z-index: 3;
+  /* Matching Home's cosmic gradient palette */
+  background: linear-gradient(145deg, 
+    rgba(20, 15, 35, 0.4) 0%, 
+    rgba(35, 25, 55, 0.3) 25%,
+    rgba(25, 20, 45, 0.35) 50%,
+    rgba(30, 20, 50, 0.3) 75%,
+    rgba(15, 10, 30, 0.4) 100%);
+  padding: 5rem;
+  border-radius: 32px;
+  /* Cosmic glow effect matching Home */
+  box-shadow: 
+    0 25px 80px rgba(0, 0, 0, 0.6),
+    0 10px 40px rgba(45, 27, 65, 0.3),
+    inset 0 1px 0 rgba(140, 120, 200, 0.15),
+    inset 0 -1px 0 rgba(60, 45, 120, 0.1);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(140, 120, 200, 0.2);
+  /* Subtle breathing animation */
+  animation: fadeInUp 1.2s ease-out, cosmicBreathe 6s ease-in-out infinite;
+}
+
+/* Title styling with cosmic glow - positioned at top left */
+.Aboutme h1 {
+  font-size: 4.5rem;
+  font-weight: 300;
+  /* Matching Home's cosmic gradient text */
+  background: linear-gradient(135deg, 
+    #ffffff 0%, 
+    #e8e3f0 30%, 
+    #d4c8e0 60%, 
+    #c8b8d8 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 2rem;
+  text-align: left;
+  line-height: 1.1;
+  font-family: 'Georgia', serif;
+  text-shadow: 
+    0 0 20px rgba(140, 120, 200, 0.3),
+    0 0 40px rgba(140, 120, 200, 0.1);
+  /* Remove the background box, keep just the text */
+  padding: 0;
+  border: none;
+  box-shadow: none;
+  /* Gentle glow animation */
+  animation: titleGlow 4s ease-in-out infinite alternate;
+  transition: all 0.3s ease;
+}
+
+/* Paragraph styling matching cosmic theme colors */
+.Aboutme p {
+  color: #e8e3f0;
+  font-size: 1.2rem;
+  line-height: 1.7;
+  text-align: left;
+  margin: 0;
+  /* Subtle differentiated background with cosmic colors */
+  background: linear-gradient(135deg, 
+    rgba(25, 20, 45, 0.4) 0%, 
+    rgba(30, 20, 50, 0.6) 100%);
+  padding: 2.5rem;
+  border-radius: 16px;
+  border: 1px solid rgba(140, 120, 200, 0.1);
+  box-shadow: 
+    0 8px 25px rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(140, 120, 200, 0.03);
+  font-family: 'Arial', sans-serif;
+  letter-spacing: 0.3px;
+  backdrop-filter: blur(8px);
+  opacity: 0.9;
+  /* Subtle slide-in animation */
+  animation: slideInContent 1.5s ease-out 0.3s both;
+}
+
+/* Remove all the extra elements and keep original About structure */
+
+/* Add floating particles specific to about section with cosmic colors */
+.about-content::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image:
+    radial-gradient(circle at 15% 25%, rgba(140, 120, 200, 0.03) 1px, transparent 1px),
+    radial-gradient(circle at 85% 75%, rgba(120, 100, 180, 0.02) 1px, transparent 1px),
+    radial-gradient(circle at 45% 15%, rgba(160, 140, 220, 0.02) 1px, transparent 1px),
+    radial-gradient(circle at 75% 35%, rgba(100, 80, 160, 0.01) 1px, transparent 1px);
+  background-size: 150px 150px, 200px 200px, 120px 120px, 180px 180px;
+  border-radius: 32px;
+  animation: gentleFloat 15s ease-in-out infinite;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Existing animations with enhanced effects */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Responsive design with cosmic consistency */
+@media (max-width: 968px) {
+  .about-content {
+    max-width: 1300px;
+    padding: 3rem;
+  }
+
+  .Aboutme h1 {
+    font-size: 3.5rem;
+    text-align: center;
+  }
+
+  .Aboutme p {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .Aboutme {
+    padding: 4rem 1rem 1rem 1rem;
+  }
+  
+  .about-content {
+    padding: 2.5rem;
+    border-radius: 24px;
+  }
+  
+  .Aboutme h1 {
+    font-size: 2.8rem;
+  }
+  
+  .Aboutme p {
+    font-size: 1.1rem;
+  }
+
+  /* Reduce animations on mobile for performance */
+  .about-content {
+    animation: fadeInUp 1s ease-out;
+  }
+
+  .Aboutme h1 {
+    animation: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-content {
+    padding: 2rem;
+    border-radius: 20px;
+  }
+  
+  .Aboutme h1 {
+    font-size: 2.2rem;
+  }
+  
+  .Aboutme p {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.5rem;
+  line-height: 1.8;
+  text-align: left; /* <--- CHANGE THIS FROM 'center' TO 'left' */
+  margin: 0;
+  background: linear-gradient(135deg, rgba(15, 15, 60, 0.5) 0%, rgba(35, 35, 100, 0.3) 100%);
+  padding: 2.5rem;
+  border-radius: 16px;
+  border: 1px solid rgba(120, 170, 240, 0.12);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  font-family: 'Arial', sans-serif;
+  letter-spacing: 0.5px;
+}
+
+  /* Minimal animations on small screens */
+  .about-content::before {
+    animation: none;
+  }
+}
+
+/* Performance optimization for mobile */
+@media (max-width: 480px) {
+  .about-content {
+    animation: fadeInUp 1s ease-out;
+  }
+}

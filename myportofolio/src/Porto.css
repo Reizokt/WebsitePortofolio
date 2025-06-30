@@ -1,0 +1,365 @@
+/* Porto.css - Clean Rounded Container for Projects - Matching Skills.css Cosmic Colors */
+
+/* Main container for the Portfolio section */
+.Portfolio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 6rem 2rem 2rem 2rem;
+}
+
+/* Content wrapper with rounded section styling - Updated to cosmic colors from Skills.css */
+.portfolio-content {
+    max-width: 1400px; /* Adjusted from 2000px, you can set your desired maximum width */
+    width: 90%; /* Changed from 150% to prevent horizontal overflow on most screens */
+    position: relative;
+    z-index: 1;
+    background: linear-gradient(145deg,
+        rgba(20, 15, 35, 0.4) 0%,
+        rgba(35, 25, 55, 0.3) 25%,
+        rgba(25, 20, 45, 0.35) 50%,
+        rgba(30, 20, 50, 0.3) 75%,
+        rgba(15, 10, 30, 0.4) 100%);
+    padding: 4rem;
+    border-radius: 24px;
+    box-shadow:
+        0 25px 80px rgba(0, 0, 0, 0.6),
+        0 10px 40px rgba(45, 27, 65, 0.3),
+        inset 0 1px 0 rgba(140, 120, 200, 0.15),
+        inset 0 -1px 0 rgba(60, 45, 120, 0.1);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(140, 120, 200, 0.2);
+    animation: fadeInUp 1s ease-out;
+    box-sizing: border-box; /* Ensures padding doesn't add to the width */
+}
+
+/* Title styling matching cosmic theme - clean without background box */
+.Portfolio h1 {
+    font-size: 4rem;
+    font-weight: 300;
+    background: linear-gradient(135deg,
+        #ffffff 0%,
+        #e8e3f0 30%,
+        #d4c8e0 60%,
+        #c8b8d8 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 1rem;
+    text-align: center;
+    line-height: 1.1;
+    font-family: 'Georgia', serif;
+    text-shadow:
+        0 0 20px rgba(140, 120, 200, 0.3),
+        0 0 40px rgba(140, 120, 200, 0.1);
+    padding: 0;
+    border: none;
+    box-shadow: none;
+}
+
+/* Subtitle paragraph styling with cosmic colors from Skills.css */
+.Portfolio p {
+    color: #e8e3f0;
+    font-size: 1.3rem;
+    line-height: 1.6;
+    text-align: center;
+    margin: 0 0 3rem 0;
+    font-family: 'Arial', sans-serif;
+    letter-spacing: 0.5px;
+}
+
+/* Portfolio grid layout */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2.5rem;
+    margin-top: 2rem;
+}
+
+/* Individual project card container - Updated to cosmic colors from Skills.css */
+.project-card {
+    background: linear-gradient(135deg,
+        rgba(25, 20, 45, 0.4) 0%,
+        rgba(30, 20, 50, 0.6) 100%);
+    border-radius: 16px;
+    border: 1px solid rgba(140, 120, 200, 0.1);
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.2),
+        inset 0 1px 0 rgba(140, 120, 200, 0.03);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.3),
+        0 5px 15px rgba(45, 27, 65, 0.2);
+}
+
+/* Project image container */
+.project-image {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    background-color: rgba(30, 20, 50, 0.8); /* Dark placeholder background */
+    display: flex; /* Use flex to center text/icons if no image */
+    align-items: center;
+    justify-content: center;
+    color: #d4c8e0; /* Text color for placeholder */
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    display: block; /* Ensure the image element itself behaves as a block */
+}
+
+/* Hide the broken image icon, or fallback to background */
+.project-image img:not([src]):not([alt]),
+.project-image img[src=""] {
+    /* If no src or empty src, hide the default broken image and rely on parent background */
+    content: none; /* Remove default content for broken images */
+    display: none; /* Hide the image element if src is empty/null */
+    /* Or, if you want a visual placeholder text: */
+    /* content: 'No Image'; */
+    /* text-align: center; */
+    /* color: #aaa; */
+}
+
+
+.project-card:hover .project-image img {
+    transform: scale(1.1);
+}
+
+/* Project overlay for links */
+.project-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg,
+        rgba(20, 15, 35, 0.8) 0%,
+        rgba(35, 25, 55, 0.9) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.project-card:hover .project-overlay {
+    opacity: 1;
+}
+
+/* Project links */
+.project-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.project-link {
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    font-family: 'Arial', sans-serif;
+}
+
+.live-link {
+    background: linear-gradient(135deg, #6a5acd 0%, #8a2be2 100%);
+    color: white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.live-link:hover {
+    background: linear-gradient(135deg, #8a2be2 0%, #6a5acd 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+.github-link {
+    background: linear-gradient(135deg, rgba(140, 120, 200, 0.1) 0%, rgba(120, 100, 180, 0.05) 100%);
+    color: #d4c8e0;
+    border: 1px solid rgba(140, 120, 200, 0.2);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.github-link:hover {
+    background: linear-gradient(135deg, rgba(140, 120, 200, 0.15) 0%, rgba(120, 100, 180, 0.08) 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    color: #ffffff;
+}
+
+/* Project content area */
+.project-content {
+    padding: 2rem;
+}
+
+/* Project titles */
+.project-content h3 {
+    color: #e8e3f0;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    font-family: 'Georgia', serif;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Project descriptions */
+.project-content p {
+    color: #e8e3f0;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Technology tags container */
+.project-technologies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+}
+
+/* Individual technology tags */
+.tech-tag {
+    background: linear-gradient(135deg,
+        rgba(140, 120, 200, 0.1) 0%,
+        rgba(120, 100, 180, 0.05) 100%);
+    color: #d4c8e0;
+    padding: 0.4rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    border: 1px solid rgba(140, 120, 200, 0.2);
+    font-family: 'Arial', sans-serif;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    cursor: default;
+}
+
+.tech-tag:hover {
+    background: linear-gradient(135deg,
+        rgba(140, 120, 200, 0.15) 0%,
+        rgba(120, 100, 180, 0.08) 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(45, 27, 65, 0.3);
+    color: #ffffff;
+}
+
+/* Added styles for loading and error messages */
+.loading-message,
+.error-message {
+    color: #d4c8e0;
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 2rem;
+    width: 100%; /* Ensure they take full width in portfolio-content */
+}
+
+.error-message {
+    color: #ff6347;
+}
+
+/* Animation keyframes (already present and correct) */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive design */
+@media (max-width: 968px) {
+    .portfolio-content {
+        padding: 3rem;
+        width: 130%;
+    }
+
+    .Portfolio h1 {
+        font-size: 3.2rem;
+    }
+
+    .portfolio-grid {
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .Portfolio {
+        padding: 4rem 1rem 1rem 1rem;
+    }
+
+    .portfolio-content {
+        padding: 2.5rem;
+        width: 110%;
+    }
+
+    .Portfolio h1 {
+        font-size: 2.8rem;
+    }
+
+    .Portfolio p {
+        font-size: 1.1rem;
+    }
+
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .project-content {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .portfolio-content {
+        padding: 2rem;
+        width: 100%;
+    }
+
+    .Portfolio h1 {
+        font-size: 2.2rem;
+    }
+
+    .Portfolio p {
+        font-size: 1rem;
+    }
+
+    .project-content {
+        padding: 1.5rem;
+    }
+
+    .project-content h3 {
+        font-size: 1.3rem;
+    }
+
+    .project-content p {
+        font-size: 0.9rem;
+    }
+
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .project-image {
+        height: 200px;
+    }
+}

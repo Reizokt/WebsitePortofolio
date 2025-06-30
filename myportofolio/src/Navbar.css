@@ -1,0 +1,221 @@
+/* Navbar.css - Blue Cosmic Gradient Theme with Sticky Navigation */
+
+/* Main navbar container - sticky positioning */
+.Navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  /* Changed to blue cosmic gradient */
+  background: linear-gradient(135deg, rgba(10, 10, 40, 0.95) 0%, rgba(20, 20, 70, 0.9) 50%, rgba(30, 30, 90, 0.85) 100%);
+  backdrop-filter: blur(15px);
+  border-bottom: 1px solid rgba(100, 150, 255, 0.1); /* Subtle blue border */
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4); /* Slightly darker shadow for contrast */
+  padding: 1rem 2rem; /* Adjusted padding to accommodate JOGI on the left */
+  transition: all 0.3s ease;
+  display: flex;
+  justify-content: space-between; /* Distribute space between logo and nav links */
+  align-items: center;
+
+  /* --- NEW: Navbar Entrance Animation (like home-content) --- */
+  opacity: 0; /* Start hidden for animation */
+  transform: translateY(-40px); /* Start further above to match fadeInUp from Home.css */
+  animation: fadeInUp 1s ease-out forwards; /* Apply the same animation */
+  /* --- END NEW --- */
+}
+
+/* Enhanced shadow on scroll (you can add this with JavaScript) */
+.Navbar.scrolled {
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6); /* Darker shadow */
+  /* Darker blue gradient on scroll */
+  background: linear-gradient(135deg, rgba(5, 5, 30, 0.98) 0%, rgba(15, 15, 60, 0.95) 50%, rgba(25, 25, 80, 0.9) 100%);
+}
+
+/* JOGI Logo/Text Styling */
+.navbar-logo {
+  color: white;
+  font-size: 1.8rem; /* Make JOGI stand out */
+  font-weight: 700;
+  font-family: 'Georgia', serif; /* Use a distinct font if desired */
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  margin-right: 2rem; /* Space between JOGI and nav links */
+}
+
+
+/* Navigation list container */
+.Navbar ul {
+  display: flex;
+  justify-content: flex-end; /* Keep aligning items to the right within the ul */
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 2.5rem; /* --- ADJUSTED GAP HERE --- */
+  background: transparent;
+  max-width: none;
+  border: none;
+  box-shadow: none;
+}
+
+/* Individual list items */
+.Navbar li {
+  position: relative;
+}
+
+/* Navigation links */
+.Navbar a {
+  color: rgba(180, 220, 255, 0.9); /* Lighter blue for text */
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.8rem 1.5rem;
+  border-radius: 25px;
+  transition: all 0.3s ease; /* Keep the overall transition for hover */
+  position: relative;
+  overflow: hidden;
+  background: transparent;
+  border: 1px solid transparent;
+}
+
+/* Hover effect with blue-ish gradient background */
+.Navbar a:hover {
+  color: white; /* Keep white for strong highlight */
+  background: linear-gradient(135deg, rgba(100, 150, 255, 0.15) 0%, rgba(100, 150, 255, 0.05) 100%); /* Blue hover */
+  border: 1px solid rgba(100, 150, 255, 0.2); /* Blue border on hover */
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); /* Slightly darker shadow on hover */
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6); /* Stronger text shadow */
+}
+
+/* Active/current page styling */
+.Navbar a.active {
+  color: white;
+  background: linear-gradient(135deg, rgba(100, 150, 255, 0.25) 0%, rgba(100, 150, 255, 0.1) 100%); /* Stronger blue active state */
+  border: 1px solid rgba(100, 150, 255, 0.4); /* Stronger blue border */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Stronger shadow */
+}
+
+/* Removed subtle animation for link text by deleting the ::before pseudo-element rules */
+.Navbar a::before {
+  content: none;
+}
+
+.Navbar a:hover::before {
+  content: none;
+}
+
+/* Mobile hamburger menu button (hidden by default) */
+.navbar-toggle {
+  display: none;
+  /* Blue-ish button background */
+  background: linear-gradient(135deg, rgba(100, 150, 255, 0.15) 0%, rgba(100, 150, 255, 0.08) 100%);
+  border: 1px solid rgba(100, 150, 255, 0.25);
+  color: rgba(180, 220, 255, 0.9); /* Lighter blue for icon */
+  padding: 0.8rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+}
+
+.navbar-toggle:hover {
+  /* Stronger blue-ish hover */
+  background: linear-gradient(135deg, rgba(100, 150, 255, 0.25) 0%, rgba(100, 150, 255, 0.15) 100%);
+  transform: translateY(-1px);
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+  .Navbar ul {
+    gap: 2rem; /* Kept existing responsive gap */
+  }
+
+  .Navbar a {
+    font-size: 0.9rem;
+    padding: 0.6rem 1.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .Navbar {
+    padding: 0.8rem 1rem;
+  }
+
+  .navbar-logo {
+    font-size: 1.5rem; /* Adjust JOGI size for smaller screens */
+    margin-right: 1rem;
+  }
+
+  .Navbar ul {
+    gap: 1.5rem; /* Kept existing responsive gap */
+  }
+
+  .Navbar a {
+    font-size: 0.85rem;
+    padding: 0.5rem 1rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .Navbar {
+    justify-content: space-between; /* Ensure JOGI and toggle are spaced */
+    padding: 0.8rem 1rem; /* Adjust padding if needed */
+  }
+
+  /* Hide regular nav and show hamburger menu */
+  .navbar-toggle {
+    display: block;
+  }
+
+  .Navbar ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 1rem;
+    right: 1rem;
+    flex-direction: column;
+    gap: 0; /* Kept existing responsive gap */
+    padding: 1rem;
+    border-radius: 16px;
+    margin-top: 0.5rem;
+    /* Mobile dropdown background - dark blue */
+    background: linear-gradient(135deg, rgba(10, 10, 50, 0.95) 0%, rgba(30, 30, 80, 0.9) 100%);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5); /* Slightly darker shadow for mobile */
+  }
+
+  .Navbar ul.mobile-open {
+    display: flex;
+  }
+
+  .Navbar li {
+    width: 100%;
+  }
+
+  .Navbar a {
+    display: block;
+    text-align: center;
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+    border-radius: 12px;
+  }
+}
+
+/* Smooth scrolling for anchor links */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px; /* Account for fixed navbar height */
+}
+
+/* Add some top padding to your main content to prevent navbar overlap */
+body {
+  padding-top: 10px; /* Adjust based on your navbar height */
+}
+
+/* Ensure the @keyframes fadeInUp is defined globally or imported if not in App.css */
+/* If you want to share animations between components, define them in App.css */
+/* or in a separate file imported by all relevant CSS files. */
+/* For clarity, the fadeInUp keyframes are assumed to be present in a globally accessible CSS file (like App.css) */
+/* as per your comment. If not, you would need to add them here. */

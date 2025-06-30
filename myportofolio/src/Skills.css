@@ -1,0 +1,381 @@
+/* Skills.css - Clean Rounded Container matching About.css Cosmic Colors */
+
+/* Main container for the Skills section - no background, let App.css handle it */
+.Skills {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 6rem 2rem 2rem 2rem;
+}
+
+/* Content wrapper with rounded section styling - Updated to cosmic colors */
+.skills-content {
+    max-width: 2000px;
+    width: 150%; /* Consider adjusting this for smaller screens, maybe 90-100% */
+    position: relative;
+    z-index: 1;
+    /* Matching About's cosmic gradient palette */
+    background: linear-gradient(145deg,
+        rgba(20, 15, 35, 0.4) 0%,
+        rgba(35, 25, 55, 0.3) 25%,
+        rgba(25, 20, 45, 0.35) 50%,
+        rgba(30, 20, 50, 0.3) 75%,
+        rgba(15, 10, 30, 0.4) 100%);
+    padding: 4rem;
+    border-radius: 24px;
+    /* Updated box-shadow with cosmic colors */
+    box-shadow:
+        0 25px 80px rgba(0, 0, 0, 0.6),
+        0 10px 40px rgba(45, 27, 65, 0.3),
+        inset 0 1px 0 rgba(140, 120, 200, 0.15),
+        inset 0 -1px 0 rgba(60, 45, 120, 0.1);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(140, 120, 200, 0.2);
+    animation: fadeInUp 1s ease-out;
+}
+
+/* Title styling matching cosmic theme - clean without background box */
+.Skills h1 {
+    font-size: 4rem;
+    font-weight: 300;
+    /* Matching About's cosmic gradient text */
+    background: linear-gradient(135deg,
+        #ffffff 0%,
+        #e8e3f0 30%,
+        #d4c8e0 60%,
+        #c8b8d8 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 1rem;
+    text-align: center;
+    line-height: 1.1;
+    font-family: 'Georgia', serif;
+    text-shadow:
+        0 0 20px rgba(140, 120, 200, 0.3),
+        0 0 40px rgba(140, 120, 200, 0.1);
+    /* Remove background box styling */
+    padding: 0;
+    border: none;
+    box-shadow: none;
+}
+
+/* Subtitle paragraph styling with cosmic colors */
+.Skills p {
+    color: #e8e3f0;
+    font-size: 1.3rem;
+    line-height: 1.6;
+    text-align: center;
+    margin: 0 0 3rem 0;
+    font-family: 'Arial', sans-serif;
+    letter-spacing: 0.5px;
+}
+
+/* Skills grid layout */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+/* Individual skill category container with cosmic colors and image */
+.skill-category {
+    background: linear-gradient(135deg,
+        rgba(25, 20, 45, 0.4) 0%,
+        rgba(30, 20, 50, 0.6) 100%);
+    border-radius: 16px;
+    border: 1px solid rgba(140, 120, 200, 0.1);
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.2),
+        inset 0 1px 0 rgba(140, 120, 200, 0.03);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.skill-category:hover {
+    transform: translateY(-5px);
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.3),
+        0 5px 15px rgba(45, 27, 65, 0.2);
+}
+
+/* Skill image container */
+.skill-image {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.skill-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.skill-category:hover .skill-image img {
+    transform: scale(1.05);
+}
+
+/* Skill image overlay */
+.skill-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg,
+        rgba(20, 15, 35, 0.8) 0%,
+        rgba(35, 25, 55, 0.9) 100%);
+    display: flex;
+    flex-direction: column; /* Changed to column to stack info and links */
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    padding: 1rem; /* Add padding to prevent content from touching edges */
+}
+
+.skill-category:hover .skill-overlay {
+    opacity: 1;
+}
+
+/* Project info in overlay */
+.skill-project-info {
+    text-align: center;
+    padding: 1rem;
+    margin-bottom: 1rem; /* Space between info and links */
+}
+
+.skill-project-info h4 {
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    font-family: 'Georgia', serif;
+}
+
+.skill-project-info p {
+    color: #e8e3f0;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Skill links container (NEW) */
+.skill-links {
+    display: flex;
+    gap: 1rem;
+    justify-content: center; /* Center the links */
+}
+
+/* Skill link base styling (NEW) */
+.skill-link {
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Certification link styling (NEW - matching github-link from portfolio) */
+.certification-link {
+    background: linear-gradient(135deg, rgba(140, 120, 200, 0.1) 0%, rgba(120, 100, 180, 0.05) 100%);
+    color: #d4c8e0;
+    border: 1px solid rgba(140, 120, 200, 0.2);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.certification-link:hover {
+    background: linear-gradient(135deg, rgba(140, 120, 200, 0.15) 0%, rgba(120, 100, 180, 0.08) 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    color: #ffffff;
+}
+
+/* Skill content area */
+.skill-content {
+    padding: 2rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Category titles with cosmic text colors */
+.skill-category h3 {
+    color: #e8e3f0;
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    text-align: left;
+    font-family: 'Georgia', serif;
+    text-shadow: 0 0 10px rgba(140, 120, 200, 0.2);
+}
+
+/* Container for skill tags */
+.skill-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    justify-content: flex-start;
+    margin-top: auto;
+}
+
+/* Individual skill tags with cosmic colors */
+.skill-tag {
+    background: linear-gradient(135deg,
+        rgba(140, 120, 200, 0.1) 0%,
+        rgba(120, 100, 180, 0.05) 100%);
+    color: #d4c8e0;
+    padding: 0.6rem 1.2rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    border: 1px solid rgba(140, 120, 200, 0.2);
+    transition: all 0.3s ease;
+    cursor: default;
+    font-family: 'Arial', sans-serif;
+    font-weight: 500;
+    display: inline-block; /* Ensure it behaves well with links */
+}
+
+.skill-tag:hover {
+    background: linear-gradient(135deg,
+        rgba(140, 120, 200, 0.15) 0%,
+        rgba(120, 100, 180, 0.08) 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(45, 27, 65, 0.3);
+    color: #ffffff;
+}
+
+/* Styling for clickable skill tags (NEW) */
+.skill-tag-link {
+    text-decoration: none; /* Remove underline from links */
+    cursor: pointer;
+}
+
+/* Animation keyframes */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive design */
+@media (max-width: 968px) {
+    .skills-content {
+        padding: 3rem;
+        width: 130%;
+    }
+
+    .Skills h1 {
+        font-size: 3.2rem;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 1.5rem;
+    }
+
+    .skill-image {
+        height: 180px;
+    }
+}
+
+@media (max-width: 768px) {
+    .Skills {
+        padding: 4rem 1rem 1rem 1rem;
+    }
+
+    .skills-content {
+        padding: 2.5rem;
+        width: 110%;
+    }
+
+    .Skills h1 {
+        font-size: 2.8rem;
+    }
+
+    .Skills p {
+        font-size: 1.1rem;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .skill-content {
+        padding: 1.5rem;
+    }
+
+    .skill-image {
+        height: 160px;
+    }
+}
+
+@media (max-width: 480px) {
+    .skills-content {
+        padding: 2rem;
+        width: 100%;
+    }
+
+    .Skills h1 {
+        font-size: 2.2rem;
+    }
+
+    .Skills p {
+        font-size: 1rem;
+    }
+
+    .skill-content {
+        padding: 1.5rem;
+    }
+
+    .skill-category h3 {
+        font-size: 1.4rem;
+    }
+
+    .skill-tag {
+        font-size: 0.85rem;
+        padding: 0.5rem 1rem;
+    }
+
+    .skill-image {
+        height: 140px;
+    }
+
+    .skill-project-info h4 {
+        font-size: 1rem;
+    }
+
+    .skill-project-info p {
+        font-size: 0.8rem;
+    }
+}
+
+/* Added styles for loading and error messages */
+.loading-message,
+.error-message {
+    color: #d4c8e0;
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 2rem;
+    width: 100%; /* Ensure they take full width */
+}
+
+.error-message {
+    color: #ff6347;
+}
