@@ -244,3 +244,194 @@
         animation: fadeInUp 1s ease-out;
     }
 }
+
+/* --- Keep all your existing About.css code above this point unchanged --- */
+
+/* Add these new styles for the Experience section */
+
+.experience {
+    /* Align with the max-width of .about-content */
+    max-width: 1300px; /* Crucial: This makes the experience section align with the about-content */
+    width: 100%; /* Allows it to take full width up to max-width */
+    margin-top: 5rem; /* Space between About me content and Experience section */
+    text-align: center; /* Center the "Experience's" title */
+    position: relative;
+    z-index: 2; /* Ensure it's above potential background elements but below the main content */
+    /* Add padding for the overall section if desired, similar to .Aboutme padding.
+       You already have padding on .Aboutme container, so this might not be strictly needed here,
+       but often sections have their own internal padding. Let's rely on .Aboutme's padding for now. */
+}
+
+/* Style for the "Experience's" H2 title */
+.experience h2 {
+    font-family: 'Outfit', monospace; /* Matching Home h1/About h1 */
+    font-size: 3.8rem; /* Slightly smaller than main About H1, similar to Home H2 */
+    font-weight: 300;
+    background: linear-gradient(135deg,
+        #ffffff 0%,
+        #f2f0f8 25%,
+        #e8e3f0 50%,
+        #d8d0e8 75%,
+        #c8b8d8 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 3rem; /* More space below title */
+    line-height: 1.2;
+    text-shadow:
+        0 0 25px rgba(140, 120, 200, 0.35),
+        0 0 50px rgba(140, 120, 200, 0.12);
+    animation: titleGlow 4s ease-in-out infinite alternate; /* Gentle glow animation */
+}
+
+/* Grid for experience items, similar to skills-grid */
+.experience-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); /* Adjust as needed */
+    gap: 2rem; /* Gap between individual experience items */
+    margin-top: 2rem; /* Space from the H2 title */
+    width: 100%; /* This grid will take up 100% of its .experience parent's width */
+}
+
+/* Individual experience item container, similar to skill-category */
+.experience-item {
+    background: linear-gradient(135deg,
+        rgba(25, 20, 45, 0.4) 0%,
+        rgba(30, 20, 50, 0.6) 100%);
+    border-radius: 16px;
+    border: 1px solid rgba(140, 120, 200, 0.1);
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.2),
+        inset 0 1px 0 rgba(140, 120, 200, 0.03);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 2.5rem; /* Adjusted padding for textual content */
+    display: flex;
+    flex-direction: column;
+    text-align: left; /* Align text within the box */
+    animation: fadeInUp 1s ease-out; /* Apply a subtle fade in */
+}
+
+.experience-item:hover {
+    transform: translateY(-5px);
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.3),
+        0 5px 15px rgba(45, 27, 65, 0.2);
+}
+
+/* Style for job/project title within experience item */
+.experience-item h3 {
+    font-family: 'Space Grotesk', sans-serif; /* Matching skill-category h3 */
+    color: #e8e3f0;
+    font-size: 1.8rem; /* Slightly larger for main title */
+    font-weight: 600;
+    margin-bottom: 0.8rem;
+    text-shadow: 0 0 10px rgba(140, 120, 200, 0.2);
+    line-height: 1.3;
+}
+
+/* Style for date and place metadata */
+.experience-meta {
+    font-family: 'Poppins', sans-serif; /* Matching skill-project-info p */
+    color: #b0a8c4; /* Slightly different shade for meta info */
+    font-size: 1rem;
+    margin-bottom: 1.5rem; /* Space below meta info */
+    opacity: 0.8;
+}
+
+/* Style for description list */
+.experience-description {
+    font-family: 'Poppins', sans-serif; /* Matching skill-project-info p */
+    color: #c8c0d8; /* Matching Aboutme p */
+    font-size: 1.1rem;
+    line-height: 1.6;
+    list-style: disc; /* Use discs for bullet points */
+    padding-left: 1.5rem; /* Indent bullet points */
+    margin: 0; /* Remove default ul margin */
+}
+
+.experience-description li {
+    margin-bottom: 0.5rem; /* Space between list items */
+}
+
+.experience-description li:last-child {
+    margin-bottom: 0; /* No margin after the last item */
+}
+
+
+/* --- RESPONSIVE ADJUSTMENTS FOR EXPERIENCE SECTION --- */
+
+@media (max-width: 968px) {
+    .experience h2 {
+        font-size: 3.2rem;
+    }
+    .experience-grid {
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 1.5rem;
+    }
+    .experience-item {
+        padding: 2rem;
+    }
+    .experience-item h3 {
+        font-size: 1.6rem;
+    }
+    .experience-meta {
+        font-size: 0.95rem;
+    }
+    .experience-description {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .experience {
+        margin-top: 4rem;
+        /* When screen shrinks, the .Aboutme padding will handle side spacing.
+           If your .experience needs its own padding on mobile, add it here.
+           For now, assuming the .Aboutme container provides it. */
+    }
+    .experience h2 {
+        font-size: 2.8rem;
+    }
+    .experience-grid {
+        grid-template-columns: 1fr; /* Stack items vertically on smaller screens */
+        gap: 1.5rem;
+    }
+    .experience-item {
+        padding: 1.8rem;
+    }
+    .experience-item h3 {
+        font-size: 1.5rem;
+    }
+    .experience-meta {
+        font-size: 0.9rem;
+    }
+    .experience-description {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .experience {
+        margin-top: 3rem;
+        /* Same as above, rely on .Aboutme padding or add specific padding here if needed */
+    }
+    .experience h2 {
+        font-size: 2.2rem;
+        margin-bottom: 2rem;
+    }
+    .experience-item {
+        padding: 1.5rem;
+        border-radius: 12px;
+    }
+    .experience-item h3 {
+        font-size: 1.3rem;
+    }
+    .experience-meta {
+        font-size: 0.85rem;
+        margin-bottom: 1rem;
+    }
+    .experience-description {
+        font-size: 0.9rem;
+        padding-left: 1rem;
+    }
+}

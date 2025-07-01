@@ -1,6 +1,5 @@
-/* Contact.css - Clean Rounded Container matching Skills.css Cosmic Design */
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@100;200;300;400;500;600;700;800&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Manrope:wght@200;300;400;500;600;700;800&family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-/* Main container for the Contact section */
 .Contact {
   display: flex;
   flex-direction: column;
@@ -9,36 +8,36 @@
   padding: 6rem 2rem 2rem 2rem;
 }
 
-/* Content wrapper with rounded section styling - EXACT MATCH TO .skills-content */
 .contact-content {
-  max-width: 2000px; /* Matching Skills.css */
-  width: 150%;      /* Matching Skills.css */
+  max-width: 1300px; /* Adjusted to match your Home and About sections */
+  width: 100%;
   position: relative;
   z-index: 1;
-  /* EXACT BACKGROUND FROM Skills.css .skills-content */
+
   background: linear-gradient(145deg,
     rgba(20, 15, 35, 0.4) 0%,
     rgba(35, 25, 55, 0.3) 25%,
     rgba(25, 20, 45, 0.35) 50%,
     rgba(30, 20, 50, 0.3) 75%,
     rgba(15, 10, 30, 0.4) 100%);
-  padding: 4rem;      /* Matching Skills.css */
-  border-radius: 24px; /* Matching Skills.css */
-  /* EXACT BOX-SHADOW FROM Skills.css .skills-content */
+  padding: 4rem;
+  border-radius: 24px;
+
   box-shadow: 0 25px 80px rgba(0, 0, 0, 0.6),
     0 10px 40px rgba(45, 27, 65, 0.3),
     inset 0 1px 0 rgba(140, 120, 200, 0.15),
     inset 0 -1px 0 rgba(60, 45, 120, 0.1);
-  backdrop-filter: blur(20px); /* Matching Skills.css */
-  border: 1px solid rgba(140, 120, 200, 0.2); /* Matching Skills.css */
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(140, 120, 200, 0.2);
   animation: fadeInUp 1s ease-out;
 }
 
-/* Title styling - EXACT MATCH TO .Skills h1 */
+
 .Contact h1 {
-  font-size: 4rem;     /* Matching Skills.css */
-  font-weight: 300;    /* Matching Skills.css */
-  /* EXACT BACKGROUND-CLIP TEXT FROM Skills.css .Skills h1 */
+  font-family: 'Outfit', monospace; /* Changed to Outfit */
+  font-size: 4rem;
+  font-weight: 300;
+
   background: linear-gradient(135deg,
     #ffffff 0%,
     #e8e3f0 30%,
@@ -47,32 +46,33 @@
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  margin-bottom: 1rem; /* Matching Skills.css */
+  margin-bottom: 1rem;
   text-align: center;
   line-height: 1.1;
-  font-family: 'Georgia', serif;
-  /* EXACT TEXT-SHADOW FROM Skills.css .Skills h1 */
+
   text-shadow:
     0 0 20px rgba(140, 120, 200, 0.3),
     0 0 40px rgba(140, 120, 200, 0.1);
-  /* Ensure no background box styling */
+
   padding: 0;
   border: none;
   box-shadow: none;
 }
 
-/* Contact subtitle - EXACT MATCH TO .Skills p */
+
 .contact-subtitle {
-  color: #e8e3f0; /* EXACT COLOR FROM Skills.css .Skills p */
-  font-size: 1.3rem;
-  line-height: 1.6;
+  color: #c8c0d8; /* Matched Home's .home-description */
+  font-size: 1.25rem; /* Matched Home's .home-description */
+  line-height: 1.7; /* Matched Home's .home-description */
   text-align: center;
   margin: 0 0 3rem 0;
-  font-family: 'Arial', sans-serif;
-  letter-spacing: 0.5px;
+  font-family: 'Space Grotesk', sans-serif; /* Changed to Space Grotesk */
+  letter-spacing: -0.01em; /* Matched Home's .home-description */
+  opacity: 0.92; /* Matched Home's .home-description */
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2); /* Matched Home's .home-description */
 }
 
-/* Contact info grid */
+
 .contact-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -80,16 +80,15 @@
   margin-bottom: 4rem;
 }
 
-/* Individual contact item - EXACT MATCH TO .skill-category */
+
 .contact-item {
-  /* EXACT BACKGROUND FROM Skills.css .skill-category */
   background: linear-gradient(135deg,
     rgba(25, 20, 45, 0.4) 0%,
     rgba(30, 20, 50, 0.6) 100%);
-  padding: 2rem;       /* Matching Skills.css */
-  border-radius: 16px; /* Matching Skills.css */
-  border: 1px solid rgba(140, 120, 200, 0.1); /* Matching Skills.css */
-  /* EXACT BOX-SHADOW FROM Skills.css .skill-category */
+  padding: 2rem;
+  border-radius: 16px;
+  border: 1px solid rgba(140, 120, 200, 0.1);
+
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2),
     inset 0 1px 0 rgba(140, 120, 200, 0.03);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -100,88 +99,101 @@
 
 .contact-item:hover {
   transform: translateY(-5px);
-  /* EXACT HOVER BOX-SHADOW FROM Skills.css .skill-category:hover */
+
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3),
     0 5px 15px rgba(45, 27, 65, 0.2);
 }
 
-/* Contact icons - Matching the style of skill tags for small elements */
+
 .contact-icon {
-  font-size: 2.5rem;
+  /* Use image for icon, so font-size is not relevant for icon sizing, width/height is */
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 60px;
+  width: 60px; /* Size for the icon container */
   height: 60px;
-  /* EXACT BACKGROUND FROM Skills.css .skill-tag */
+
   background: linear-gradient(135deg, rgba(140, 120, 200, 0.1) 0%, rgba(120, 100, 180, 0.05) 100%);
-  border-radius: 50%; /* Changed to 50% for circle */
+  border-radius: 50%;
   border: 1px solid rgba(140, 120, 200, 0.1);
-  color: #d4c8e0; /* Matching Skills.css .skill-tag color */
-  text-shadow: 0 0 8px rgba(140, 120, 200, 0.5); /* Subtle glow for icons */
+  color: #d4c8e0; /* This color would be for text icons, but we use images now */
+  text-shadow: 0 0 8px rgba(140, 120, 200, 0.5);
 }
 
-/* Contact details */
+.contact-icon img { /* Style for the actual image inside contact-icon */
+    width: 70%; /* Make image fit within the circular container */
+    height: 70%;
+    object-fit: contain;
+    filter: brightness(1.2); /* Slightly brighten images for visibility */
+    transition: transform 0.3s ease;
+}
+
+.contact-item:hover .contact-icon img {
+    transform: scale(1.1); /* Slight grow on hover */
+}
+
 .contact-details {
   flex: 1;
 }
 
-/* Contact details H3 - EXACT MATCH TO .skill-category h3 */
+
 .contact-details h3 {
-  color: #e8e3f0; /* EXACT COLOR FROM Skills.css .skill-category h3 */
-  font-size: 1.2rem;
+  font-family: 'Space Grotesk', sans-serif; /* Changed to Space Grotesk */
+  color: #e8e3f0;
   font-weight: 600;
   margin-bottom: 0.5rem;
-  font-family: 'Georgia', serif;
-  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5); /* Matching Skills.css (or similar dark shadow) */
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
 }
 
-/* Contact link - Matching .skill-tag's text color and subtle hover */
+
 .contact-link {
-  color: #d4c8e0; /* EXACT COLOR FROM Skills.css .skill-tag */
+  font-family: 'Space Grotesk', sans-serif; /* Changed to Space Grotesk */
+  color: #d4c8e0;
   font-size: 1rem;
   text-decoration: none;
-  font-family: 'Arial', sans-serif;
-  transition: color 0.3s ease, text-shadow 0.3s ease; /* Added text-shadow transition */
+  transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
 .contact-link:hover {
-  color: #ffffff; /* White on hover for stronger highlight, like skill-tag hover */
+  color: #ffffff;
   text-decoration: underline;
-  text-shadow: 0 0 10px rgba(140, 120, 200, 0.5); /* Added a subtle glow on hover */
+  text-shadow: 0 0 10px rgba(140, 120, 200, 0.5);
 }
 
-/* Contact form section - EXACT MATCH TO .skill-category */
+
+/* NEW: Contact Form Section Styles */
 .contact-form-section {
-  /* EXACT BACKGROUND FROM Skills.css .skill-category */
+  max-width: 800px; /* Increased max-width for the form section */
+  width: 100%;
   background: linear-gradient(135deg,
     rgba(25, 20, 45, 0.4) 0%,
     rgba(30, 20, 50, 0.6) 100%);
-  padding: 3rem;       /* Matching Skills.css */
-  border-radius: 16px; /* Matching Skills.css */
-  border: 1px solid rgba(140, 120, 200, 0.1); /* Matching Skills.css */
-  /* EXACT BOX-SHADOW FROM Skills.css .skill-category */
+  padding: 3rem;
+  border-radius: 16px;
+  border: 1px solid rgba(140, 120, 200, 0.1);
+
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2),
     inset 0 1px 0 rgba(140, 120, 200, 0.03);
+  margin-top: 3rem; /* Space above the form section */
 }
 
-/* Contact form section H2 - EXACT MATCH TO .skill-category h3 (color & shadow) */
+
 .contact-form-section h2 {
-  color: #e8e3f0; /* EXACT COLOR FROM Skills.css .skill-category h3 */
-  font-size: 2rem; /* Keep existing font size for h2 */
+  font-family: 'Outfit', monospace; /* Changed to Outfit */
+  color: #e8e3f0;
+  font-size: 2.2rem; /* Slightly larger for form title */
   font-weight: 600;
   margin-bottom: 2rem;
   text-align: center;
-  font-family: 'Georgia', serif;
-  text-shadow: 0 0 10px rgba(140, 120, 200, 0.2); /* Matching Skills.css */
+  text-shadow: 0 0 10px rgba(140, 120, 200, 0.2);
 }
 
-/* Contact form */
+
 .contact-form {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  max-width: 600px;
+  max-width: 600px; /* Ensures the form itself doesn't stretch too wide within the section */
   margin: 0 auto;
 }
 
@@ -190,17 +202,23 @@
   flex-direction: column;
 }
 
-/* Form inputs and textarea - Matching .skill-tag for input background/border */
+.form-label {
+    font-family: 'Space Grotesk', sans-serif; /* Font for labels */
+    color: #e8e3f0;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
 .form-input,
 .form-textarea {
-  /* BACKGROUND FROM Skills.css .skill-tag (slightly adjusted opacity for input field clarity) */
   background: linear-gradient(135deg, rgba(140, 120, 200, 0.15) 0%, rgba(120, 100, 180, 0.08) 100%);
-  border: 1px solid rgba(140, 120, 200, 0.25); /* Slightly stronger border for inputs */
+  border: 1px solid rgba(140, 120, 200, 0.25);
   border-radius: 8px;
   padding: 1rem 1.2rem;
-  color: white; /* Ensure text is visible */
+  color: white;
   font-size: 1rem;
-  font-family: 'Arial', sans-serif;
+  font-family: 'Space Grotesk', sans-serif; /* Changed to Space Grotesk */
   transition: all 0.3s ease;
   backdrop-filter: blur(5px);
 }
@@ -208,12 +226,12 @@
 .form-input::placeholder,
 .form-textarea::placeholder {
   color: rgba(255, 255, 255, 0.6);
+  font-family: 'Space Grotesk', sans-serif; /* Ensure placeholder uses the same font */
 }
 
 .form-input:focus,
 .form-textarea:focus {
   outline: none;
-  /* Focus state based on Skills.css .skill-tag:hover with more prominent blue */
   border-color: rgba(140, 120, 200, 0.8);
   background: linear-gradient(135deg, rgba(140, 120, 200, 0.2) 0%, rgba(120, 100, 180, 0.1) 100%);
   box-shadow: 0 0 0 3px rgba(140, 120, 200, 0.3), inset 0 0 8px rgba(140, 120, 200, 0.4);
@@ -224,17 +242,22 @@
   min-height: 120px;
 }
 
-/* Submit button - Matching Portfolio.css .live-link button */
+.recaptcha-container {
+    margin: 1rem auto; /* Center reCAPTCHA */
+    display: flex;
+    justify-content: center;
+}
+
+
 .submit-button {
-  /* EXACT BACKGROUND FROM Portfolio.css .live-link */
-  background: linear-gradient(135deg, #6a5acd 0%, #8a2be2 100%); /* Medium slate blue to blue violet */
+  background: linear-gradient(135deg, #6a5acd 0%, #8a2be2 100%);
   color: white;
   border: none;
   padding: 1rem 2rem;
   border-radius: 8px;
   font-size: 1.1rem;
   font-weight: 600;
-  font-family: 'Arial', sans-serif;
+  font-family: 'Space Grotesk', sans-serif; /* Changed to Space Grotesk */
   cursor: pointer;
   transition: all 0.3s ease;
   margin-top: 1rem;
@@ -242,7 +265,6 @@
 }
 
 .submit-button:hover {
-  /* EXACT HOVER BACKGROUND FROM Portfolio.css .live-link:hover */
   background: linear-gradient(135deg, #8a2be2 0%, #6a5acd 100%);
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
@@ -252,7 +274,28 @@
   transform: translateY(0);
 }
 
-/* Animation keyframes (ensure fadeInUp is defined once, e.g., in App.css) */
+.status-message {
+    font-family: 'Space Grotesk', sans-serif;
+    text-align: center;
+    margin-top: 1rem;
+    padding: 0.8rem;
+    border-radius: 8px;
+    font-weight: 500;
+}
+
+.status-message.success {
+    color: #a7f3d0; /* Greenish for success */
+    background-color: rgba(6, 172, 114, 0.1);
+    border: 1px solid rgba(6, 172, 114, 0.3);
+}
+
+.status-message.error {
+    color: #fca5a5; /* Reddish for error */
+    background-color: rgba(239, 68, 68, 0.1);
+    border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -264,11 +307,13 @@
   }
 }
 
-/* Responsive design - Matching Skills.css widths where applicable */
+
+/* Responsive Design Adjustments */
 @media (max-width: 968px) {
   .contact-content {
     padding: 3rem;
-    width: 130%; /* Matching Skills.css */
+    max-width: 900px; /* Adjust max-width here */
+    width: 100%;
   }
 
   .Contact h1 {
@@ -279,6 +324,12 @@
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 1.2rem;
   }
+  .contact-form-section {
+    padding: 2.5rem;
+  }
+  .contact-form-section h2 {
+    font-size: 1.8rem;
+  }
 }
 
 @media (max-width: 768px) {
@@ -288,7 +339,8 @@
 
   .contact-content {
     padding: 2.5rem;
-    width: 110%; /* Matching Skills.css */
+    max-width: 600px; /* Further reduce max-width */
+    width: 100%;
   }
 
   .Contact h1 {
@@ -300,21 +352,19 @@
   }
 
   .contact-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; /* Stack items vertically */
     gap: 1rem;
   }
 
   .contact-item {
     padding: 1.5rem;
-    flex-direction: column; /* Keep vertical layout for mobile contact items */
+    flex-direction: column; /* Stack icon and text vertically */
     text-align: center;
     gap: 1rem;
   }
-
   .contact-form-section {
     padding: 2rem;
   }
-
   .contact-form-section h2 {
     font-size: 1.6rem;
   }
@@ -323,7 +373,7 @@
 @media (max-width: 480px) {
   .contact-content {
     padding: 2rem;
-    width: 100%; /* Matching Skills.css */
+    width: 100%;
   }
 
   .Contact h1 {
@@ -339,9 +389,12 @@
   }
 
   .contact-icon {
-    font-size: 2rem;
     width: 50px;
     height: 50px;
+  }
+  .contact-icon img {
+    width: 65%;
+    height: 65%;
   }
 
   .contact-details h3 {

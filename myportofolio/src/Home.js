@@ -9,7 +9,7 @@ function Home() {
           <h1>Jonathan Giono Suparmo</h1>
           <h2>Developer</h2>
           <button className="go-there-btn">
-            Go There →
+            <a href ="#about" style={{ textDecoration: 'none' }}>Go There →</a>
           </button>
         </div>
         <div className="home-visual">

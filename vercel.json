@@ -1,13 +1,12 @@
-
 {
   "rewrites": [
     {
       "source": "/api/(.*)",
-      "destination": "/server/api" 
+      "destination": "/server/api/index.js"
     },
     {
       "source": "/(.*)",
-      "destination": "/myportofolio/$1" 
+      "destination": "/myportofolio/$1"
     }
   ],
   "builds": [
@@ -17,7 +16,7 @@
       "config": { "distDir": "build" }
     },
     {
-      "src": "server/api/index.js", 
+      "src": "server/api/index.js",
       "use": "@vercel/node"
     }
   ],
@@ -25,7 +24,7 @@
     {
       "source": "/(.*)",
       "headers": [
-        { "key": "Access-Control-Allow-Origin", "value": "*" },
+        { "key": "Access-Control-Allow-Origin", "value": "https://website-portofolio-jogi.vercel.app" },
         { "key": "Access-Control-Allow-Methods", "value": "GET,POST,PUT,DELETE,OPTIONS" },
         { "key": "Access-Control-Allow-Headers", "value": "X-Requested-With, Content-Type, Accept, Authorization" }
       ]
