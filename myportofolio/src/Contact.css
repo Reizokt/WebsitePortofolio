@@ -9,11 +9,10 @@
 }
 
 .contact-content {
-  max-width: 1300px; /* Adjusted to match your Home and About sections */
+  max-width: 1300px;
   width: 100%;
   position: relative;
   z-index: 1;
-
   background: linear-gradient(145deg,
     rgba(20, 15, 35, 0.4) 0%,
     rgba(35, 25, 55, 0.3) 25%,
@@ -22,7 +21,6 @@
     rgba(15, 10, 30, 0.4) 100%);
   padding: 4rem;
   border-radius: 24px;
-
   box-shadow: 0 25px 80px rgba(0, 0, 0, 0.6),
     0 10px 40px rgba(45, 27, 65, 0.3),
     inset 0 1px 0 rgba(140, 120, 200, 0.15),
@@ -32,12 +30,10 @@
   animation: fadeInUp 1s ease-out;
 }
 
-
 .Contact h1 {
-  font-family: 'Outfit', monospace; /* Changed to Outfit */
-  font-size: 4rem;
+  font-family: 'Outfit', monospace;
+  font-size: 4.5rem;
   font-weight: 300;
-
   background: linear-gradient(135deg,
     #ffffff 0%,
     #e8e3f0 30%,
@@ -49,46 +45,40 @@
   margin-bottom: 1rem;
   text-align: center;
   line-height: 1.1;
-
   text-shadow:
     0 0 20px rgba(140, 120, 200, 0.3),
     0 0 40px rgba(140, 120, 200, 0.1);
-
   padding: 0;
   border: none;
   box-shadow: none;
 }
 
-
 .contact-subtitle {
-  color: #c8c0d8; /* Matched Home's .home-description */
-  font-size: 1.25rem; /* Matched Home's .home-description */
-  line-height: 1.7; /* Matched Home's .home-description */
+  color: #c8c0d8;
+  font-size: 1.45rem;
+  line-height: 1.7;
   text-align: center;
   margin: 0 0 3rem 0;
-  font-family: 'Space Grotesk', sans-serif; /* Changed to Space Grotesk */
-  letter-spacing: -0.01em; /* Matched Home's .home-description */
-  opacity: 0.92; /* Matched Home's .home-description */
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2); /* Matched Home's .home-description */
+  font-family: 'Space Grotesk', sans-serif;
+  letter-spacing: -0.01em;
+  opacity: 0.92;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
-
 
 .contact-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1.5rem;
+  gap: 1.8rem;
   margin-bottom: 4rem;
 }
-
 
 .contact-item {
   background: linear-gradient(135deg,
     rgba(25, 20, 45, 0.4) 0%,
     rgba(30, 20, 50, 0.6) 100%);
-  padding: 2rem;
+  padding: 2.2rem;
   border-radius: 16px;
   border: 1px solid rgba(140, 120, 200, 0.1);
-
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2),
     inset 0 1px 0 rgba(140, 120, 200, 0.03);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -99,57 +89,52 @@
 
 .contact-item:hover {
   transform: translateY(-5px);
-
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3),
     0 5px 15px rgba(45, 27, 65, 0.2);
 }
 
-
 .contact-icon {
-  /* Use image for icon, so font-size is not relevant for icon sizing, width/height is */
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 60px; /* Size for the icon container */
-  height: 60px;
-
+  width: 65px;
+  height: 65px;
   background: linear-gradient(135deg, rgba(140, 120, 200, 0.1) 0%, rgba(120, 100, 180, 0.05) 100%);
   border-radius: 50%;
   border: 1px solid rgba(140, 120, 200, 0.1);
-  color: #d4c8e0; /* This color would be for text icons, but we use images now */
+  color: #d4c8e0;
   text-shadow: 0 0 8px rgba(140, 120, 200, 0.5);
 }
 
-.contact-icon img { /* Style for the actual image inside contact-icon */
-    width: 70%; /* Make image fit within the circular container */
-    height: 70%;
-    object-fit: contain;
-    filter: brightness(1.2); /* Slightly brighten images for visibility */
-    transition: transform 0.3s ease;
+.contact-icon img {
+  width: 70%;
+  height: 70%;
+  object-fit: contain;
+  filter: brightness(1.2);
+  transition: transform 0.3s ease;
 }
 
 .contact-item:hover .contact-icon img {
-    transform: scale(1.1); /* Slight grow on hover */
+  transform: scale(1.1);
 }
 
 .contact-details {
   flex: 1;
 }
 
-
 .contact-details h3 {
-  font-family: 'Space Grotesk', sans-serif; /* Changed to Space Grotesk */
+  font-family: 'Space Grotesk', sans-serif;
   color: #e8e3f0;
   font-weight: 600;
   margin-bottom: 0.5rem;
   text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+  font-size: 1.4rem;
 }
 
-
 .contact-link {
-  font-family: 'Space Grotesk', sans-serif; /* Changed to Space Grotesk */
+  font-family: 'Space Grotesk', sans-serif;
   color: #d4c8e0;
-  font-size: 1rem;
+  font-size: 1.15rem;
   text-decoration: none;
   transition: color 0.3s ease, text-shadow 0.3s ease;
 }
@@ -160,40 +145,35 @@
   text-shadow: 0 0 10px rgba(140, 120, 200, 0.5);
 }
 
-
-/* NEW: Contact Form Section Styles */
 .contact-form-section {
-  max-width: 800px; /* Increased max-width for the form section */
+  max-width: 850px;
   width: 100%;
   background: linear-gradient(135deg,
     rgba(25, 20, 45, 0.4) 0%,
     rgba(30, 20, 50, 0.6) 100%);
-  padding: 3rem;
+  padding: 3.5rem;
   border-radius: 16px;
   border: 1px solid rgba(140, 120, 200, 0.1);
-
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2),
     inset 0 1px 0 rgba(140, 120, 200, 0.03);
-  margin-top: 3rem; /* Space above the form section */
+  margin-top: 3.5rem;
 }
 
-
 .contact-form-section h2 {
-  font-family: 'Outfit', monospace; /* Changed to Outfit */
+  font-family: 'Outfit', monospace;
   color: #e8e3f0;
-  font-size: 2.2rem; /* Slightly larger for form title */
+  font-size: 2.6rem;
   font-weight: 600;
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
   text-align: center;
   text-shadow: 0 0 10px rgba(140, 120, 200, 0.2);
 }
 
-
 .contact-form {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
-  max-width: 600px; /* Ensures the form itself doesn't stretch too wide within the section */
+  gap: 1.8rem;
+  max-width: 650px;
   margin: 0 auto;
 }
 
@@ -203,11 +183,11 @@
 }
 
 .form-label {
-    font-family: 'Space Grotesk', sans-serif; /* Font for labels */
-    color: #e8e3f0;
-    font-size: 1rem;
-    margin-bottom: 0.5rem;
-    font-weight: 500;
+  font-family: 'Space Grotesk', sans-serif;
+  color: #e8e3f0;
+  font-size: 1.15rem;
+  margin-bottom: 0.6rem;
+  font-weight: 500;
 }
 
 .form-input,
@@ -215,10 +195,10 @@
   background: linear-gradient(135deg, rgba(140, 120, 200, 0.15) 0%, rgba(120, 100, 180, 0.08) 100%);
   border: 1px solid rgba(140, 120, 200, 0.25);
   border-radius: 8px;
-  padding: 1rem 1.2rem;
+  padding: 1.15rem 1.35rem;
   color: white;
-  font-size: 1rem;
-  font-family: 'Space Grotesk', sans-serif; /* Changed to Space Grotesk */
+  font-size: 1.1rem;
+  font-family: 'Space Grotesk', sans-serif;
   transition: all 0.3s ease;
   backdrop-filter: blur(5px);
 }
@@ -226,7 +206,7 @@
 .form-input::placeholder,
 .form-textarea::placeholder {
   color: rgba(255, 255, 255, 0.6);
-  font-family: 'Space Grotesk', sans-serif; /* Ensure placeholder uses the same font */
+  font-family: 'Space Grotesk', sans-serif;
 }
 
 .form-input:focus,
@@ -239,28 +219,27 @@
 
 .form-textarea {
   resize: vertical;
-  min-height: 120px;
+  min-height: 140px;
 }
 
 .recaptcha-container {
-    margin: 1rem auto; /* Center reCAPTCHA */
-    display: flex;
-    justify-content: center;
+  margin: 1.2rem auto;
+  display: flex;
+  justify-content: center;
 }
-
 
 .submit-button {
   background: linear-gradient(135deg, #6a5acd 0%, #8a2be2 100%);
   color: white;
   border: none;
-  padding: 1rem 2rem;
+  padding: 1.2rem 2.5rem;
   border-radius: 8px;
-  font-size: 1.1rem;
+  font-size: 1.25rem;
   font-weight: 600;
-  font-family: 'Space Grotesk', sans-serif; /* Changed to Space Grotesk */
+  font-family: 'Space Grotesk', sans-serif;
   cursor: pointer;
   transition: all 0.3s ease;
-  margin-top: 1rem;
+  margin-top: 1.2rem;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
@@ -275,26 +254,26 @@
 }
 
 .status-message {
-    font-family: 'Space Grotesk', sans-serif;
-    text-align: center;
-    margin-top: 1rem;
-    padding: 0.8rem;
-    border-radius: 8px;
-    font-weight: 500;
+  font-family: 'Space Grotesk', sans-serif;
+  text-align: center;
+  margin-top: 1.2rem;
+  padding: 1rem;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 1.1rem;
 }
 
 .status-message.success {
-    color: #a7f3d0; /* Greenish for success */
-    background-color: rgba(6, 172, 114, 0.1);
-    border: 1px solid rgba(6, 172, 114, 0.3);
+  color: #a7f3d0;
+  background-color: rgba(6, 172, 114, 0.1);
+  border: 1px solid rgba(6, 172, 114, 0.3);
 }
 
 .status-message.error {
-    color: #fca5a5; /* Reddish for error */
-    background-color: rgba(239, 68, 68, 0.1);
-    border: 1px solid rgba(239, 68, 68, 0.3);
+  color: #fca5a5;
+  background-color: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.3);
 }
-
 
 @keyframes fadeInUp {
   from {
@@ -307,12 +286,50 @@
   }
 }
 
-
-/* Responsive Design Adjustments */
 @media (max-width: 968px) {
   .contact-content {
+    padding: 3.5rem;
+    max-width: 900px;
+    width: 100%;
+  }
+
+  .Contact h1 {
+    font-size: 3.6rem;
+  }
+
+  .contact-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+  .contact-form-section {
     padding: 3rem;
-    max-width: 900px; /* Adjust max-width here */
+  }
+  .contact-form-section h2 {
+    font-size: 2.2rem;
+  }
+  .form-label {
+    font-size: 1.1rem;
+  }
+  .form-input,
+  .form-textarea {
+    font-size: 1.05rem;
+  }
+  .submit-button {
+    font-size: 1.2rem;
+  }
+  .status-message {
+    font-size: 1.05rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .Contact {
+    padding: 4.5rem 1.5rem 1.5rem 1.5rem;
+  }
+
+  .contact-content {
+    padding: 3rem;
+    max-width: 650px;
     width: 100%;
   }
 
@@ -320,77 +337,69 @@
     font-size: 3.2rem;
   }
 
-  .contact-grid {
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.2rem;
-  }
-  .contact-form-section {
-    padding: 2.5rem;
-  }
-  .contact-form-section h2 {
-    font-size: 1.8rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .Contact {
-    padding: 4rem 1rem 1rem 1rem;
-  }
-
-  .contact-content {
-    padding: 2.5rem;
-    max-width: 600px; /* Further reduce max-width */
-    width: 100%;
-  }
-
-  .Contact h1 {
-    font-size: 2.8rem;
-  }
-
   .contact-subtitle {
-    font-size: 1.1rem;
+    font-size: 1.25rem;
   }
 
   .contact-grid {
-    grid-template-columns: 1fr; /* Stack items vertically */
-    gap: 1rem;
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
   }
 
   .contact-item {
-    padding: 1.5rem;
-    flex-direction: column; /* Stack icon and text vertically */
+    padding: 1.8rem;
+    flex-direction: column;
     text-align: center;
-    gap: 1rem;
+    gap: 1.2rem;
+  }
+  .contact-details h3 {
+    font-size: 1.3rem;
+  }
+  .contact-link {
+    font-size: 1.1rem;
   }
   .contact-form-section {
-    padding: 2rem;
+    padding: 2.5rem;
   }
   .contact-form-section h2 {
-    font-size: 1.6rem;
+    font-size: 2rem;
+  }
+  .form-label {
+    font-size: 1.05rem;
+  }
+  .form-input,
+  .form-textarea {
+    font-size: 1rem;
+  }
+  .submit-button {
+    font-size: 1.15rem;
+  }
+  .status-message {
+    font-size: 1rem;
   }
 }
 
 @media (max-width: 480px) {
   .contact-content {
-    padding: 2rem;
+    padding: 2.5rem;
     width: 100%;
   }
 
   .Contact h1 {
-    font-size: 2.2rem;
+    font-size: 2.6rem;
   }
 
   .contact-subtitle {
-    font-size: 1rem;
+    font-size: 1.15rem;
   }
 
   .contact-item {
-    padding: 1.2rem;
+    padding: 1.5rem;
   }
 
   .contact-icon {
-    width: 50px;
-    height: 50px;
+    width: 55px;
+    height: 55px;
   }
   .contact-icon img {
     width: 65%;
@@ -398,24 +407,32 @@
   }
 
   .contact-details h3 {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
   }
 
   .contact-link {
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
 
   .contact-form-section {
-    padding: 1.5rem;
+    padding: 2rem;
   }
 
   .contact-form-section h2 {
-    font-size: 1.4rem;
+    font-size: 1.8rem;
   }
 
   .form-input,
   .form-textarea {
-    padding: 0.8rem 1rem;
-    font-size: 0.9rem;
+    padding: 1rem 1.1rem;
+    font-size: 0.95rem;
+  }
+  .submit-button {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+  }
+  .status-message {
+    padding: 0.9rem;
+    font-size: 0.95rem;
   }
 }

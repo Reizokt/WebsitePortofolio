@@ -9,22 +9,21 @@ services:
     ports:
       - '5000:5000'
     environment:
-      # --- ADD THIS LINE ---
+      
       MONGODB_URI: "mongodb+srv://joenath376:zs6CyPpVUxdHVWRe@webdatabase.5kijk0l.mongodb.net/?retryWrites=true&w=majority&appName=WebDatabase" # PASTE YOUR FULL URI HERE
-      # --- END ADDITION ---
+      
       PORT: 5000
     restart: unless-stopped
     networks:
       - mern-network
 
   frontend:
-    # ... (frontend service configuration) ...
+    
     build:
       context: ./myportofolio
       dockerfile: Dockerfile.client
       args:
-        # For local Docker Compose, the backend is still 'localhost' for the browser
-        # If your frontend container were to access it directly via Docker's internal network, it would be http://backend:5000
+        
         REACT_APP_API_URL: http://localhost:5000 
     container_name: mern_frontend_dev
     ports:
@@ -38,3 +37,6 @@ services:
 networks:
   mern-network:
     driver: bridge
+
+
+

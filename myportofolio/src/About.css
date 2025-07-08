@@ -1,8 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@100;200;300;400;500;600;700;800&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Manrope:wght@200;300;400;500;600;700;800&family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-/* About.css - Cosmic Nebula colors with original About design */
-
-/* Main container for the About section */
 .Aboutme {
     display: flex;
     flex-direction: column;
@@ -12,13 +9,11 @@
     position: relative;
 }
 
-/* Content wrapper with cosmic styling matching Home colors and size */
 .about-content {
     max-width: 1300px;
     width: 100%;
     position: relative;
     z-index: 3;
-    /* Matching Home's cosmic gradient palette */
     background: linear-gradient(145deg,
         rgba(20, 15, 35, 0.4) 0%,
         rgba(35, 25, 55, 0.3) 25%,
@@ -27,7 +22,6 @@
         rgba(15, 10, 30, 0.4) 100%);
     padding: 5rem;
     border-radius: 32px;
-    /* Cosmic glow effect matching Home */
     box-shadow:
         0 25px 80px rgba(0, 0, 0, 0.6),
         0 10px 40px rgba(45, 27, 65, 0.3),
@@ -35,49 +29,42 @@
         inset 0 -1px 0 rgba(60, 45, 120, 0.1);
     backdrop-filter: blur(20px);
     border: 1px solid rgba(140, 120, 200, 0.2);
-    /* Subtle breathing animation */
     animation: fadeInUp 1.2s ease-out, cosmicBreathe 6s ease-in-out infinite;
 }
 
-/* Title styling with cosmic glow - positioned at top left */
 .Aboutme h1 {
-    font-family: 'Outfit', monospace; /* Changed font to match Home h1 */
-    font-size: 4.2rem; /* Adjusted to match Home h1 */
+    font-family: 'Outfit', monospace;
+    font-size: 4.8rem;
     font-weight: 300;
-    /* Matching Home's cosmic gradient text */
     background: linear-gradient(135deg,
         #ffffff 0%,
-        #f2f0f8 25%, /* Adjusted to match Home h1 */
-        #e8e3f0 50%, /* Adjusted to match Home h1 */
-        #d8d0e8 75%, /* Adjusted to match Home h1 */
-        #c8b8d8 100%); /* Adjusted to match Home h1 */
+        #f2f0f8 25%,
+        #e8e3f0 50%,
+        #d8d0e8 75%,
+        #c8b8d8 100%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     margin-bottom: 2rem;
     text-align: left;
-    line-height: 1.2; /* Adjusted to match Home h1 */
+    line-height: 1.2;
     text-shadow:
-        0 0 25px rgba(140, 120, 200, 0.35), /* Adjusted to match Home h1 */
-        0 0 50px rgba(140, 120, 200, 0.12); /* Adjusted to match Home h1 */
-    /* Remove the background box, keep just the text */
+        0 0 25px rgba(140, 120, 200, 0.35),
+        0 0 50px rgba(140, 120, 200, 0.12);
     padding: 0;
     border: none;
     box-shadow: none;
-    /* Gentle glow animation */
     animation: titleGlow 4s ease-in-out infinite alternate;
     transition: all 0.3s ease;
 }
 
-/* Paragraph styling matching cosmic theme colors */
 .Aboutme p {
-    font-family: 'Space Grotesk', sans-serif; /* Changed font to match Home home-description */
-    color: #c8c0d8; /* Changed color to match Home home-description */
-    font-size: 1.25rem; /* Adjusted to match Home home-description */
-    line-height: 1.7; /* Adjusted to match Home home-description */
+    font-family: 'Space Grotesk', sans-serif;
+    color: #c8c0d8;
+    font-size: 1.45rem;
+    line-height: 1.7;
     text-align: left;
     margin: 0;
-    /* Subtle differentiated background with cosmic colors */
     background: linear-gradient(135deg,
         rgba(25, 20, 45, 0.4) 0%,
         rgba(30, 20, 50, 0.6) 100%);
@@ -87,17 +74,13 @@
     box-shadow:
         0 8px 25px rgba(0, 0, 0, 0.2),
         inset 0 1px 0 rgba(140, 120, 200, 0.03);
-    letter-spacing: -0.01em; /* Adjusted to match Home home-description */
+    letter-spacing: -0.01em;
     backdrop-filter: blur(8px);
-    opacity: 0.92; /* Adjusted to match Home home-description */
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2); /* Adjusted to match Home home-description */
-    /* Subtle slide-in animation */
+    opacity: 0.92;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
     animation: slideInContent 1.5s ease-out 0.3s both;
 }
 
-/* Remove all the extra elements and keep original About structure */
-
-/* Add floating particles specific to about section with cosmic colors */
 .about-content::before {
     content: '';
     position: absolute;
@@ -117,7 +100,6 @@
     z-index: -1;
 }
 
-/* Existing animations with enhanced effects */
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -151,7 +133,6 @@
     }
 }
 
-/* Responsive design with cosmic consistency */
 @media (max-width: 968px) {
     .about-content {
         max-width: 1300px;
@@ -159,13 +140,13 @@
     }
 
     .Aboutme h1 {
-        font-size: 3.8rem; /* Adjusted to match Home h1 @968px */
+        font-size: 4.2rem;
         text-align: center;
     }
 
     .Aboutme p {
-        font-size: 1.25rem; /* Adjusted to match Home home-description @968px */
-        padding: 2rem; /* Adjusted padding */
+        font-size: 1.35rem;
+        padding: 2rem;
     }
 }
 
@@ -180,16 +161,15 @@
     }
 
     .Aboutme h1 {
-        font-size: 3rem; /* Adjusted to match Home h1 @768px */
-        letter-spacing: 0.03em; /* Adjusted to match Home h1 @768px */
+        font-size: 3.4rem;
+        letter-spacing: 0.03em;
     }
 
     .Aboutme p {
-        font-size: 1.15rem; /* Adjusted to match Home home-description @768px */
-        padding: 1.5rem; /* Adjusted padding */
+        font-size: 1.25rem;
+        padding: 1.5rem;
     }
 
-    /* Reduce animations on mobile for performance */
     .about-content {
         animation: fadeInUp 1s ease-out;
     }
@@ -206,66 +186,55 @@
     }
 
     .Aboutme h1 {
-        font-size: 2.4rem; /* Adjusted to match Home h1 @480px */
-        letter-spacing: 0.02em; /* Adjusted to match Home h1 @480px */
+        font-size: 2.8rem;
+        letter-spacing: 0.02em;
     }
 
     .Aboutme p {
-        color: #c8c0d8; /* Reverted color to match Home home-description */
-        font-size: 1.05rem; /* Adjusted to match Home home-description @480px */
-        line-height: 1.7; /* Reverted line-height to match Home home-description */
-        text-align: left; /* Kept as requested */
+        color: #c8c0d8;
+        font-size: 1.15rem;
+        line-height: 1.7;
+        text-align: left;
         margin: 0;
         background: linear-gradient(135deg,
-            rgba(25, 20, 45, 0.4) 0%, /* Reverted background to original about-content */
-            rgba(30, 20, 50, 0.6) 100%); /* Reverted background to original about-content */
-        padding: 1.5rem; /* Adjusted padding */
+            rgba(25, 20, 45, 0.4) 0%,
+            rgba(30, 20, 50, 0.6) 100%);
+        padding: 1.5rem;
         border-radius: 16px;
-        border: 1px solid rgba(140, 120, 200, 0.1); /* Reverted border to original about-content */
+        border: 1px solid rgba(140, 120, 200, 0.1);
         box-shadow:
-            0 8px 25px rgba(0, 0, 0, 0.2), /* Reverted box-shadow to original about-content */
-            inset 0 1px 0 rgba(140, 120, 200, 0.03); /* Reverted box-shadow to original about-content */
-        font-family: 'Space Grotesk', sans-serif; /* Reverted font to match Home home-description */
-        letter-spacing: -0.01em; /* Reverted letter-spacing to match Home home-description */
+            0 8px 25px rgba(0, 0, 0, 0.2),
+            inset 0 1px 0 rgba(140, 120, 200, 0.03);
+        font-family: 'Space Grotesk', sans-serif;
+        letter-spacing: -0.01em;
         backdrop-filter: blur(8px);
-        opacity: 0.92; /* Reverted opacity to match Home home-description */
-        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2); /* Reverted text-shadow to match Home home-description */
+        opacity: 0.92;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
     }
 
-    /* Minimal animations on small screens */
     .about-content::before {
         animation: none;
     }
 }
 
-/* Performance optimization for mobile */
 @media (max-width: 480px) {
     .about-content {
         animation: fadeInUp 1s ease-out;
     }
 }
 
-/* --- Keep all your existing About.css code above this point unchanged --- */
-
-/* Add these new styles for the Experience section */
-
 .experience {
-    /* Align with the max-width of .about-content */
-    max-width: 1300px; /* Crucial: This makes the experience section align with the about-content */
-    width: 100%; /* Allows it to take full width up to max-width */
-    margin-top: 5rem; /* Space between About me content and Experience section */
-    text-align: center; /* Center the "Experience's" title */
+    max-width: 1300px;
+    width: 100%;
+    margin-top: 5rem;
+    text-align: center;
     position: relative;
-    z-index: 2; /* Ensure it's above potential background elements but below the main content */
-    /* Add padding for the overall section if desired, similar to .Aboutme padding.
-       You already have padding on .Aboutme container, so this might not be strictly needed here,
-       but often sections have their own internal padding. Let's rely on .Aboutme's padding for now. */
+    z-index: 2;
 }
 
-/* Style for the "Experience's" H2 title */
 .experience h2 {
-    font-family: 'Outfit', monospace; /* Matching Home h1/About h1 */
-    font-size: 3.8rem; /* Slightly smaller than main About H1, similar to Home H2 */
+    font-family: 'Outfit', monospace;
+    font-size: 4.2rem;
     font-weight: 300;
     background: linear-gradient(135deg,
         #ffffff 0%,
@@ -276,24 +245,22 @@
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    margin-bottom: 3rem; /* More space below title */
+    margin-bottom: 3rem;
     line-height: 1.2;
     text-shadow:
         0 0 25px rgba(140, 120, 200, 0.35),
         0 0 50px rgba(140, 120, 200, 0.12);
-    animation: titleGlow 4s ease-in-out infinite alternate; /* Gentle glow animation */
+    animation: titleGlow 4s ease-in-out infinite alternate;
 }
 
-/* Grid for experience items, similar to skills-grid */
 .experience-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); /* Adjust as needed */
-    gap: 2rem; /* Gap between individual experience items */
-    margin-top: 2rem; /* Space from the H2 title */
-    width: 100%; /* This grid will take up 100% of its .experience parent's width */
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+    width: 100%;
 }
 
-/* Individual experience item container, similar to skill-category */
 .experience-item {
     background: linear-gradient(135deg,
         rgba(25, 20, 45, 0.4) 0%,
@@ -304,11 +271,11 @@
         0 8px 25px rgba(0, 0, 0, 0.2),
         inset 0 1px 0 rgba(140, 120, 200, 0.03);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    padding: 2.5rem; /* Adjusted padding for textual content */
+    padding: 2.5rem;
     display: flex;
     flex-direction: column;
-    text-align: left; /* Align text within the box */
-    animation: fadeInUp 1s ease-out; /* Apply a subtle fade in */
+    text-align: left;
+    animation: fadeInUp 1s ease-out;
 }
 
 .experience-item:hover {
@@ -318,51 +285,45 @@
         0 5px 15px rgba(45, 27, 65, 0.2);
 }
 
-/* Style for job/project title within experience item */
 .experience-item h3 {
-    font-family: 'Space Grotesk', sans-serif; /* Matching skill-category h3 */
+    font-family: 'Space Grotesk', sans-serif;
     color: #e8e3f0;
-    font-size: 1.8rem; /* Slightly larger for main title */
+    font-size: 2.2rem;
     font-weight: 600;
     margin-bottom: 0.8rem;
     text-shadow: 0 0 10px rgba(140, 120, 200, 0.2);
     line-height: 1.3;
 }
 
-/* Style for date and place metadata */
 .experience-meta {
-    font-family: 'Poppins', sans-serif; /* Matching skill-project-info p */
-    color: #b0a8c4; /* Slightly different shade for meta info */
-    font-size: 1rem;
-    margin-bottom: 1.5rem; /* Space below meta info */
+    font-family: 'Poppins', sans-serif;
+    color: #b0a8c4;
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
     opacity: 0.8;
 }
 
-/* Style for description list */
 .experience-description {
-    font-family: 'Poppins', sans-serif; /* Matching skill-project-info p */
-    color: #c8c0d8; /* Matching Aboutme p */
-    font-size: 1.1rem;
+    font-family: 'Poppins', sans-serif;
+    color: #c8c0d8;
+    font-size: 1.3rem;
     line-height: 1.6;
-    list-style: disc; /* Use discs for bullet points */
-    padding-left: 1.5rem; /* Indent bullet points */
-    margin: 0; /* Remove default ul margin */
+    list-style: disc;
+    padding-left: 1.5rem;
+    margin: 0;
 }
 
 .experience-description li {
-    margin-bottom: 0.5rem; /* Space between list items */
+    margin-bottom: 0.5rem;
 }
 
 .experience-description li:last-child {
-    margin-bottom: 0; /* No margin after the last item */
+    margin-bottom: 0;
 }
-
-
-/* --- RESPONSIVE ADJUSTMENTS FOR EXPERIENCE SECTION --- */
 
 @media (max-width: 968px) {
     .experience h2 {
-        font-size: 3.2rem;
+        font-size: 3.6rem;
     }
     .experience-grid {
         grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -372,51 +333,47 @@
         padding: 2rem;
     }
     .experience-item h3 {
-        font-size: 1.6rem;
+        font-size: 1.8rem;
     }
     .experience-meta {
-        font-size: 0.95rem;
+        font-size: 1.15rem;
     }
     .experience-description {
-        font-size: 1rem;
+        font-size: 1.2rem;
     }
 }
 
 @media (max-width: 768px) {
     .experience {
         margin-top: 4rem;
-        /* When screen shrinks, the .Aboutme padding will handle side spacing.
-           If your .experience needs its own padding on mobile, add it here.
-           For now, assuming the .Aboutme container provides it. */
     }
     .experience h2 {
-        font-size: 2.8rem;
+        font-size: 3.2rem;
     }
     .experience-grid {
-        grid-template-columns: 1fr; /* Stack items vertically on smaller screens */
+        grid-template-columns: 1fr;
         gap: 1.5rem;
     }
     .experience-item {
         padding: 1.8rem;
     }
     .experience-item h3 {
-        font-size: 1.5rem;
+        font-size: 1.7rem;
     }
     .experience-meta {
-        font-size: 0.9rem;
+        font-size: 1.1rem;
     }
     .experience-description {
-        font-size: 0.95rem;
+        font-size: 1.15rem;
     }
 }
 
 @media (max-width: 480px) {
     .experience {
         margin-top: 3rem;
-        /* Same as above, rely on .Aboutme padding or add specific padding here if needed */
     }
     .experience h2 {
-        font-size: 2.2rem;
+        font-size: 2.6rem;
         margin-bottom: 2rem;
     }
     .experience-item {
@@ -424,14 +381,14 @@
         border-radius: 12px;
     }
     .experience-item h3 {
-        font-size: 1.3rem;
+        font-size: 1.5rem;
     }
     .experience-meta {
-        font-size: 0.85rem;
+        font-size: 1rem;
         margin-bottom: 1rem;
     }
     .experience-description {
-        font-size: 0.9rem;
+        font-size: 1.05rem;
         padding-left: 1rem;
     }
 }

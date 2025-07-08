@@ -1,8 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@100;200;300;400;500;600;700;800&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Manrope:wght@200;300;400;500;600;700;800&family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-/* Porto.css - Clean Rounded Container for Projects - Matching Skills.css Cosmic Colors */
-
-/* Main container for the Portfolio section */
 .Portfolio {
     display: flex;
     flex-direction: column;
@@ -11,10 +8,9 @@
     padding: 6rem 2rem 2rem 2rem;
 }
 
-/* Content wrapper with rounded section styling - Updated to cosmic colors from Skills.css */
 .portfolio-content {
-    max-width: 1400px; /* Adjusted from 2000px, you can set your desired maximum width */
-    width: 90%; /* Changed from 150% to prevent horizontal overflow on most screens */
+    max-width: 1400px;
+    width: 90%;
     position: relative;
     z-index: 1;
     background: linear-gradient(145deg,
@@ -23,7 +19,7 @@
         rgba(25, 20, 45, 0.35) 50%,
         rgba(30, 20, 50, 0.3) 75%,
         rgba(15, 10, 30, 0.4) 100%);
-    padding: 4rem;
+    padding: 4.5rem;
     border-radius: 24px;
     box-shadow:
         0 25px 80px rgba(0, 0, 0, 0.6),
@@ -33,13 +29,12 @@
     backdrop-filter: blur(20px);
     border: 1px solid rgba(140, 120, 200, 0.2);
     animation: fadeInUp 1s ease-out;
-    box-sizing: border-box; /* Ensures padding doesn't add to the width */
+    box-sizing: border-box;
 }
 
-/* Title styling matching cosmic theme - clean without background box */
 .Portfolio h1 {
-    font-family: 'Outfit', monospace; /* Changed font */
-    font-size: 4rem;
+    font-family: 'Outfit', monospace;
+    font-size: 4.5rem;
     font-weight: 300;
     background: linear-gradient(135deg,
         #ffffff 0%,
@@ -49,7 +44,7 @@
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    margin-bottom: 1rem;
+    margin-bottom: 1.2rem;
     text-align: center;
     line-height: 1.1;
     text-shadow:
@@ -60,26 +55,23 @@
     box-shadow: none;
 }
 
-/* Subtitle paragraph styling with cosmic colors from Skills.css */
 .Portfolio p {
-    font-family: 'Space Grotesk', sans-serif; /* Changed font */
+    font-family: 'Space Grotesk', sans-serif;
     color: #e8e3f0;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     line-height: 1.6;
     text-align: center;
-    margin: 0 0 3rem 0;
+    margin: 0 0 3.5rem 0;
     letter-spacing: 0.5px;
 }
 
-/* Portfolio grid layout */
 .portfolio-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    gap: 2.5rem;
-    margin-top: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+    gap: 3rem;
+    margin-top: 2.5rem;
 }
 
-/* Individual project card container - Updated to cosmic colors from Skills.css */
 .project-card {
     background: linear-gradient(135deg,
         rgba(25, 20, 45, 0.4) 0%,
@@ -100,18 +92,17 @@
         0 5px 15px rgba(45, 27, 65, 0.2);
 }
 
-/* Project image container */
 .project-image {
     position: relative;
     width: 100%;
-    height: 250px;
+    height: 280px;
     overflow: hidden;
-    background-color: rgba(30, 20, 50, 0.8); /* Dark placeholder background */
-    display: flex; /* Use flex to center text/icons if no image */
+    background-color: rgba(30, 20, 50, 0.8);
+    display: flex;
     align-items: center;
     justify-content: center;
-    color: #d4c8e0; /* Text color for placeholder */
-    font-size: 1.2rem;
+    color: #d4c8e0;
+    font-size: 1.35rem;
     font-weight: 500;
 }
 
@@ -120,27 +111,19 @@
     height: 100%;
     object-fit: cover;
     transition: transform 0.3s ease;
-    display: block; /* Ensure the image element itself behaves as a block */
+    display: block;
 }
 
-/* Hide the broken image icon, or fallback to background */
 .project-image img:not([src]):not([alt]),
 .project-image img[src=""] {
-    /* If no src or empty src, hide the default broken image and rely on parent background */
-    content: none; /* Remove default content for broken images */
-    display: none; /* Hide the image element if src is empty/null */
-    /* Or, if you want a visual placeholder text: */
-    /* content: 'No Image'; */
-    /* text-align: center; */
-    /* color: #aaa; */
+    content: none;
+    display: none;
 }
-
 
 .project-card:hover .project-image img {
     transform: scale(1.1);
 }
 
-/* Project overlay for links */
 .project-overlay {
     position: absolute;
     top: 0;
@@ -161,19 +144,18 @@
     opacity: 1;
 }
 
-/* Project links */
 .project-links {
     display: flex;
-    gap: 1rem;
+    gap: 1.2rem;
 }
 
 .project-link {
-    font-family: 'Poppins', sans-serif; /* Changed font */
-    padding: 0.8rem 1.5rem;
+    font-family: 'Poppins', sans-serif;
+    padding: 0.95rem 1.8rem;
     border-radius: 8px;
     text-decoration: none;
     font-weight: 600;
-    font-size: 0.9rem;
+    font-size: 1.05rem;
     transition: all 0.3s ease;
 }
 
@@ -203,47 +185,42 @@
     color: #ffffff;
 }
 
-/* Project content area */
 .project-content {
-    padding: 2rem;
+    padding: 2.2rem;
 }
 
-/* Project titles */
 .project-content h3 {
-    font-family: 'Space Grotesk', sans-serif; /* Changed font */
+    font-family: 'Space Grotesk', sans-serif;
     color: #e8e3f0;
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     font-weight: 600;
-    margin-bottom: 1rem;
+    margin-bottom: 1.1rem;
     text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
 }
 
-/* Project descriptions */
 .project-content p {
-    font-family: 'Poppins', sans-serif; /* Changed font */
+    font-family: 'Poppins', sans-serif;
     color: #e8e3f0;
-    font-size: 1rem;
+    font-size: 1.15rem;
     line-height: 1.6;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.8rem;
 }
 
-/* Technology tags container */
 .project-technologies {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.6rem;
+    gap: 0.8rem;
 }
 
-/* Individual technology tags */
 .tech-tag {
-    font-family: 'Poppins', sans-serif; /* Changed font */
+    font-family: 'Poppins', sans-serif;
     background: linear-gradient(135deg,
         rgba(140, 120, 200, 0.1) 0%,
         rgba(120, 100, 180, 0.05) 100%);
     color: #d4c8e0;
-    padding: 0.4rem 0.8rem;
+    padding: 0.5rem 1rem;
     border-radius: 15px;
-    font-size: 0.8rem;
+    font-size: 0.95rem;
     border: 1px solid rgba(140, 120, 200, 0.2);
     font-weight: 500;
     transition: all 0.3s ease;
@@ -259,21 +236,19 @@
     color: #ffffff;
 }
 
-/* Added styles for loading and error messages */
 .loading-message,
 .error-message {
     color: #d4c8e0;
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     text-align: center;
-    padding: 2rem;
-    width: 100%; /* Ensure they take full width in portfolio-content */
+    padding: 2.5rem;
+    width: 100%;
 }
 
 .error-message {
     color: #ff6347;
 }
 
-/* Animation keyframes (already present and correct) */
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -285,31 +260,89 @@
     }
 }
 
-/* Responsive design */
 @media (max-width: 968px) {
     .portfolio-content {
+        padding: 3.5rem;
+        width: 100%;
+    }
+
+    .Portfolio h1 {
+        font-size: 3.6rem;
+    }
+
+    .portfolio-grid {
+        grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+        gap: 2.2rem;
+    }
+    .Portfolio p {
+        font-size: 1.4rem;
+    }
+    .project-image {
+        height: 260px;
+    }
+    .project-content h3 {
+        font-size: 1.6rem;
+    }
+    .project-content p {
+        font-size: 1.1rem;
+    }
+    .project-link {
+        font-size: 1rem;
+        padding: 0.9rem 1.6rem;
+    }
+    .tech-tag {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .Portfolio {
+        padding: 4.5rem 1.5rem 1.5rem 1.5rem;
+    }
+
+    .portfolio-content {
         padding: 3rem;
-        width: 130%;
+        width: 100%;
     }
 
     .Portfolio h1 {
         font-size: 3.2rem;
     }
 
+    .Portfolio p {
+        font-size: 1.25rem;
+    }
+
     .portfolio-grid {
-        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-        gap: 2rem;
+        grid-template-columns: 1fr;
+        gap: 2.2rem;
+    }
+
+    .project-content {
+        padding: 1.8rem;
+    }
+    .project-image {
+        height: 240px;
+    }
+    .project-content h3 {
+        font-size: 1.5rem;
+    }
+    .project-content p {
+        font-size: 1.05rem;
+    }
+    .project-link {
+        font-size: 0.95rem;
+        padding: 0.85rem 1.5rem;
+    }
+    .tech-tag {
+        font-size: 0.85rem;
     }
 }
 
-@media (max-width: 768px) {
-    .Portfolio {
-        padding: 4rem 1rem 1rem 1rem;
-    }
-
+@media (max-width: 480px) {
     .portfolio-content {
         padding: 2.5rem;
-        width: 110%;
+        width: 100%;
     }
 
     .Portfolio h1 {
@@ -317,51 +350,35 @@
     }
 
     .Portfolio p {
-        font-size: 1.1rem;
-    }
-
-    .portfolio-grid {
-        grid-template-columns: 1fr;
-        gap: 2rem;
+        font-size: 1.15rem;
     }
 
     .project-content {
-        padding: 1.5rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .portfolio-content {
-        padding: 2rem;
-        width: 100%;
-    }
-
-    .Portfolio h1 {
-        font-size: 2.4rem;
-    }
-
-    .Portfolio p {
-        font-size: 1rem;
-    }
-
-    .project-content {
-        padding: 1.5rem;
+        padding: 1.8rem;
     }
 
     .project-content h3 {
-        font-size: 1.3rem;
+        font-size: 1.4rem;
     }
 
     .project-content p {
-        font-size: 0.9rem;
+        font-size: 1rem;
     }
 
     .portfolio-grid {
         grid-template-columns: 1fr;
-        gap: 1.5rem;
+        gap: 1.8rem;
     }
 
     .project-image {
-        height: 200px;
+        height: 220px;
+    }
+    .project-link {
+        font-size: 0.9rem;
+        padding: 0.8rem 1.3rem;
+    }
+    .tech-tag {
+        font-size: 0.8rem;
+        padding: 0.4rem 0.8rem;
     }
 }

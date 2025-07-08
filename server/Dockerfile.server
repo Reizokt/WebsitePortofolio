@@ -1,28 +1,26 @@
-# Stage 1: Build Node.js application
+
 FROM node:20-alpine AS builder
 
 WORKDIR /app
 
-# Copy package.json and package-lock.json first to leverage Docker cache
 COPY package.json package-lock.json ./
 
-# Install production dependencies only
+
 RUN npm install --only=production
 
-# Copy the rest of your application code
+
 COPY . .
 
-# Stage 2: Create a slim production image
+
 FROM node:20-alpine
 
 WORKDIR /app
 
-# Copy only necessary files from the builder stage
+
 COPY --from=builder /app/node_modules ./node_modules
 COPY --from=builder /app ./
 
-# Expose the port your Node.js app listens on (e.g., 5000)
 EXPOSE 5000
 
-# Command to run your application when the container starts
-CMD ["node", "index.js"]
+
+CMD ["node", "/app/api/index.js"]

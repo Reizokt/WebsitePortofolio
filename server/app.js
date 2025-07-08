@@ -1,27 +1,26 @@
-// server/app.js
-
 require('dotenv').config();
 
 const express = require('express');
 const cors = require('cors');
 const mongoose = require('mongoose');
 
-// --- REMOVE nodemailer import, as it's no longer used for mailto links ---
-// const nodemailer = require('nodemailer'); 
 
 const projectRoutes = require('./routes/projectRoutes');
 const skillRoutes = require('./routes/skillRoutes');
 
 const app = express();
 
-// CORS Configuration for your Vercel Domain (KEEP THIS)
 const YOUR_VERCEL_DOMAIN = 'https://website-portofolio-jogi.vercel.app';
 app.use(cors({
   origin: function (origin, callback) {
     if (!origin) return callback(null, true);
     if (origin === YOUR_VERCEL_DOMAIN) {
       return callback(null, true);
-    } else {
+    }
+    if(origin === "http://localhost:3000"){
+        return callback(null, true);
+    }
+    else {
       console.warn(`CORS: Unauthorized origin '${origin}' blocked.`);
       return callback(new Error('Not allowed by CORS'), false);
     }
@@ -32,7 +31,7 @@ app.use(cors({
 
 app.use(express.json());
 
-// MongoDB Connection Setup (KEEP THIS)
+// MongoDB Connection Setup 
 const MONGODB_URI = process.env.MONGODB_URI;
 let isConnected = false;
 const connectDB = async () => {
@@ -61,19 +60,10 @@ app.use(async (req, res, next) => {
     next();
 });
 
-// Existing API Routes (KEEP THESE)
+// Existing API Routes 
 app.use('/api/projects', projectRoutes);
 app.use('/api/skills', skillRoutes);
 
-
-// --- REMOVE THE ENTIRE EMAIL SENDING API ENDPOINT ---
-/*
-app.post('/api/send-email', async (req, res) => {
-    // ... (All the email sending logic you had here) ...
-});
-*/
-
-// Existing root routes (KEEP THESE)
 app.get('/api', (req, res) => {
     res.send('Welcome to the Serverless MERN Backend!');
 });

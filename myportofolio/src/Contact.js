@@ -1,8 +1,7 @@
 import './Contact.css';
 import github from './github.png';
 import linkedin from './linkedin.png';
-import gmail from './gmails.png'; // Make sure you still have this image if you want to use it for the email icon
-
+import gmail from './gmails.png'; 
 function Contact() {
   const contactInfo = [
     {
@@ -17,12 +16,14 @@ function Contact() {
       icon: <img src={github} alt="GitHub" className="contact-icon" />,
       link: "https://github.com/Reizokt"
     },
-    // Add the direct mailto link for Email
     {
       type: "Email",
-      value: "joenath376@gmail.com", // This is your email address
+      value: "joenath376@gmail.com", 
       icon: <img src={gmail} alt="Gmail" className="contact-icon" />,
-      link: "mailto:joenath376@gmail.com?subject=Inquiry from your Portfolio Website&body=Hello Jonathan,%0A%0AI found your portfolio website and would like to connect about..."
+      link: `mailto:joenath376@gmail.com?${new URLSearchParams({
+        subject: "Inquiry from your Portfolio Website",
+        body: "Hello Jonathan,\n\nI found your portfolio website and would like to connect about..."
+      }).toString()}`
     }
   ];
 
@@ -43,7 +44,6 @@ function Contact() {
                 <a
                   href={contact.link}
                   className="contact-link"
-                  // Open non-email links in new tab, mailto opens client
                   target={contact.type !== "Email" ? "_blank" : "_self"}
                   rel={contact.type !== "Email" ? "noopener noreferrer" : ""}
                 >
@@ -53,8 +53,6 @@ function Contact() {
             </div>
           ))}
         </div>
-
-
       </div>
     </div>
   );

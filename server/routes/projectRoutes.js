@@ -1,18 +1,18 @@
 const express = require('express');
 const router = express.Router();
-const Project = require('../models/Project.js'); // Import the Project model
+const Project = require('../models/Project'); // Correct relative path from server/routes to server/models
 
 // GET all projects
 router.get('/', async (req, res) => {
     try {
-        const projects = await Project.find().sort({ createdAt: -1 }); // Get all projects, sorted by creation date descending
+        const projects = await Project.find().sort({ createdAt: -1 });
         res.json(projects);
     } catch (err) {
         res.status(500).json({ message: err.message });
     }
 });
 
-// POST a new project (For adding projects, typically admin functionality)
+// POST a new project
 router.post('/', async (req, res) => {
     const project = new Project({
         title: req.body.title,
@@ -22,16 +22,15 @@ router.post('/', async (req, res) => {
         githubLink: req.body.githubLink,
         image: req.body.image
     });
-
     try {
         const newProject = await project.save();
-        res.status(201).json(newProject); // 201 Created status
+        res.status(201).json(newProject);
     } catch (err) {
-        res.status(400).json({ message: err.message }); // 400 Bad Request for validation errors
+        res.status(400).json({ message: err.message });
     }
 });
 
-// GET a single project by ID (Optional, if you have project detail pages)
+// GET a single project by ID
 router.get('/:id', async (req, res) => {
     try {
         const project = await Project.findById(req.params.id);
@@ -42,13 +41,12 @@ router.get('/:id', async (req, res) => {
     }
 });
 
-// PUT (Update) a project by ID (Typically admin functionality)
+// PUT (Update) a project by ID
 router.put('/:id', async (req, res) => {
     try {
         const project = await Project.findById(req.params.id);
         if (!project) return res.status(404).json({ message: 'Project not found' });
 
-        // Update fields if they exist in the request body
         if (req.body.title != null) project.title = req.body.title;
         if (req.body.description != null) project.description = req.body.description;
         if (req.body.technologies != null) project.technologies = req.body.technologies;
@@ -63,14 +61,14 @@ router.put('/:id', async (req, res) => {
     }
 });
 
-// DELETE a project by ID (Typically admin functionality)
+// DELETE a project by ID
 router.delete('/:id', async (req, res) => {
     try {
         const result = await Project.deleteOne({ _id: req.params.id });
         if (result.deletedCount === 0) {
-            return res.status(404).json({ message: 'Project not found' });
+            return res.status(404).json({ message: 'Todo not found' });
         }
-        res.json({ message: 'Project deleted successfully' });
+        res.json({ message: 'Todo deleted successfully' });
     } catch (err) {
         res.status(500).json({ message: err.message });
     }
